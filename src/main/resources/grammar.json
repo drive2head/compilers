@@ -1,0 +1,9 @@
+{
+  "nonterminals": ["EXP"],
+  "terminals": ["+", "-"],
+  "productions": [
+    {"EXP": ["EXP"]},
+    {"EXP": ["eps"]}
+  ],
+  "startSymbol": "EXP"
+}

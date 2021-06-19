@@ -16,6 +16,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test-junit"))
     implementation(kotlin("stdlib-jdk8"))
+    implementation("com.beust:klaxon:5.5")
 }
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
