@@ -1,4 +1,13 @@
-T__0=1
-ID=2
-WS=3
-'hello'=1
+SimpleVariableDeclaration=1
+Identifier=2
+IdentifierName=3
+IdentifierReference=4
+BindingIdentifier=5
+LabelIdentifier=6
+Initializer=7
+AssignmentExpression=8
+TypeAnnotation=9
+Type=10
+PrimaryOrUnionType=11
+PrimaryType=12
+PredefinedType=13

@@ -1,5 +1,4 @@
-// Generated from /Users/stroom/GitHub/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
-package mypackage;
+// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -11,11 +10,11 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface GramVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link GramParser#r}.
+	 * Visit a parse tree produced by {@link GramParser#prog}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitR(GramParser.RContext ctx);
+	T visitProg(GramParser.ProgContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GramParser#start}.
 	 * @param ctx the parse tree

@@ -1,5 +1,4 @@
-// Generated from /Users/stroom/GitHub/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
-package mypackage;
+// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -16,13 +15,13 @@ public class GramBaseListener implements GramListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterR(GramParser.RContext ctx) { }
+	@Override public void enterProg(GramParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitR(GramParser.RContext ctx) { }
+	@Override public void exitProg(GramParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

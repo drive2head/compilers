@@ -1,5 +1,4 @@
-// Generated from /Users/stroom/GitHub/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
-package mypackage;
+// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -8,15 +7,15 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface GramListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link GramParser#r}.
+	 * Enter a parse tree produced by {@link GramParser#prog}.
 	 * @param ctx the parse tree
 	 */
-	void enterR(GramParser.RContext ctx);
+	void enterProg(GramParser.ProgContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#r}.
+	 * Exit a parse tree produced by {@link GramParser#prog}.
 	 * @param ctx the parse tree
 	 */
-	void exitR(GramParser.RContext ctx);
+	void exitProg(GramParser.ProgContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GramParser#start}.
 	 * @param ctx the parse tree
