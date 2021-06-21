@@ -18,7 +18,8 @@ dependencies {
     testImplementation(kotlin("test-junit"))
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.beust:klaxon:5.5")
-    antlr("org.antlr:antlr4:4.5")
+    antlr("org.antlr:antlr4:4.8")
+    antlr("org.antlr:antlr4-runtime:4.8")
 }
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
