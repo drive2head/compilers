@@ -1,13 +1,516 @@
 {
-  "nonterminals": ["S", "A", "B"],
-  "terminals": ["a", "b"],
-  "productions": [
-    {"S": ["a"]},
-    {"S": ["A"]},
-
-    {"A": ["A", "B"]},
-
-    {"B": ["b"]}
+  "nonterminals": [
+    "Type",
+    "PrimaryOrUnionType",
+    "PrimaryType",
+    "ParenthesizedType",
+    "PredefinedType",
+    "TypeReference",
+    "TypeName",
+    "ObjectType",
+    "TypeBody",
+    "TypeMemberList",
+    "TypeMember",
+    "ArrayType",
+    "UnionType",
+    "FunctionType",
+    "TypeQuery",
+    "TypeQueryExpression",
+    "PropertySignature",
+    "PropertyName",
+    "CallSignature",
+    "ParameterList",
+    "RequiredParameterList",
+    "RequiredParameter",
+    "AccessibilityModifier",
+    "OptionalParameterList",
+    "OptionalParameter",
+    "RestParameter",
+    "ConstructSignature",
+    "IndexSignature",
+    "MethodSignature",
+    "TypeAliasDeclaration",
+    "Identifier",
+    "PrimaryExpression",
+    "Literal",
+    "ArrayLiteral",
+    "ObjectLiteral",
+    "PropertyDefinitionList",
+    "PropertyDefinition",
+    "LiteralPropertyName",
+    "Initializer",
+    "NewExpression",
+    "CallExpression",
+    "ArgumentList",
+    "RelationalExpression",
+    "EqualityExpression",
+    "BitwiseANDExpression",
+    "BitwiseXORExpression",
+    "BitwiseORExpression",
+    "LogicalANDExpression",
+    "LogicalORExpression",
+    "ConditionalExpression",
+    "AssignmentExpression",
+    "AssignmentOperator",
+    "Expression",
+    "Statement",
+    "Declaration",
+    "HoistableDeclaration",
+    "BreakableStatement",
+    "BlockStatement",
+    "Block",
+    "StatementList",
+    "StatementListItem",
+    "LexicalDeclaration",
+    "LetOrConst",
+    "BindingList",
+    "LexicalBinding",
+    "BindingPattern",
+    "ObjectBindingPattern",
+    "ArrayBindingPatterns",
+    "BindingPropertyList",
+    "BindingElementList",
+    "BindingProperty",
+    "BindingElement",
+    "SingleNameBinding",
+    "BindingRestElement",
+    "EmptyStatement",
+    "ExpressionStatement",
+    "IfStatement",
+    "IterationStatement",
+    "ForDeclaration",
+    "ForBinding",
+    "ContinueStatement",
+    "BreakStatement",
+    "ReturnStatement",
+    "LabelledStatement",
+    "LabelledItem",
+    "ThrowStatement",
+    "TryStatement",
+    "Catch",
+    "Finally",
+    "CatchParameter",
+    "FinaCatchParameterlly",
+    "FunctionDeclaration",
+    "FunctionExpression",
+    "FunctionBody",
+    "FunctionStatementList",
+    "ArrowFunction",
+    "ArrowParameters",
+    "ConciseBody",
+    "MethodDefinition",
+    "PropertySetParameterList",
+    "ClassDeclaration",
+    "ClassExpression",
+    "ClassTail",
+    "ClassHeritage",
+    "ClassBody",
+    "ClassElementList",
+    "ClassElement"
   ],
-  "startSymbol": "S"
+  "terminals": [],
+  "productions": [
+    {"Type": ["PrimaryOrUnionType"]},
+    {"Type": ["FunctionType"]},
+    {"Type": ["ConstructorType"]},
+
+    {"PrimaryOrUnionType": ["PrimaryType"]},
+    {"PrimaryOrUnionType": ["UnionType"]},
+
+    {"PrimaryType": ["ParenthesizedType"]},
+    {"PrimaryType": ["PredefinedType"]},
+    {"PrimaryType": ["TypeReference"]},
+    {"PrimaryType": ["ObjectType"]},
+    {"PrimaryType": ["ArrayType"]},
+    {"PrimaryType": ["TupleType"]},
+    {"PrimaryType": ["TypeQuery"]},
+
+    {"ParenthesizedType": ["(", "Type", ")"]},
+
+    {"PredefinedType": ["any"]}, {"PredefinedType": ["number"]}, {"PredefinedType": ["boolean"]}, {"PredefinedType": ["string"]}, {"PredefinedType": ["void"]},
+
+    {"TypeReference": ["TypeName"]},
+    {"TypeReference": ["TypeName", "TypeArguments"]},
+
+    {"TypeName": ["Identifier"]},
+
+    {"ObjectType": ["{", "}"]},
+    {"ObjectType": ["{", "TypeBody", "}"]},
+
+    {"TypeBody": ["TypeMemberList"]},
+    {"TypeBody": ["TypeMemberList", ";"]},
+
+    {"TypeMemberList": ["TypeMember"]},
+    {"TypeMemberList": ["TypeMemberList", ";", "TypeMember"]},
+
+    {"TypeMember": ["PropertySignature"]},
+    {"TypeMember": ["CallSignature"]},
+    {"TypeMember": ["ConstructSignature"]},
+    {"TypeMember": ["IndexSignature"]},
+    {"TypeMember": ["MethodSignature"]},
+
+    {"ArrayType": ["PrimaryType", "[", "]"]},
+
+    {"UnionType": ["PrimaryOrUnionType", "|", "PrimaryType"]},
+
+    {"FunctionType": ["(", ")", "=>", "Type"]},
+    {"FunctionType": ["(", "ParameterList", ")", "=>", "Type"]},
+
+    {"TypeQuery": ["typeof", "TypeQueryExpression"]},
+
+    {"TypeQueryExpression": ["Identifier"]},
+    {"TypeQueryExpression": ["TypeQueryExpression", ".", "IdentifierName"]},
+
+    {"PropertySignature": ["PropertyName"]},
+    {"PropertySignature": ["PropertyName", "?"]},
+    {"PropertySignature": ["PropertyName", "TypeAnnotation"]},
+    {"PropertySignature": ["PropertyName", "?", "TypeAnnotation"]},
+
+    {"PropertyName": ["IdentifierName"]},
+    {"PropertyName": ["StringLiteral"]},
+    {"PropertyName": ["NumericLiteral"]},
+
+
+    {"CallSignature": ["(", ")"]},
+    {"CallSignature": ["(", ")", "TypeAnnotation"]},
+    {"CallSignature": ["(", "ParameterList", ")"]},
+    {"CallSignature": ["(", "ParameterList", ")", "TypeAnnotation"]},
+    {"CallSignature": ["TypeParameters", "(", ")"]},
+    {"CallSignature": ["TypeParameters", "(", ")", "TypeAnnotation"]},
+    {"CallSignature": ["TypeParameters", "(", "ParameterList", ")"]},
+    {"CallSignature": ["TypeParameters", "(", "ParameterList", ")", "TypeAnnotation"]},
+
+    {"ParameterList": ["RequiredParameterList"]},
+    {"ParameterList": ["OptionalParameterList"]},
+    {"ParameterList": ["RestParameter"]},
+    {"ParameterList": ["RequiredParameterList", ",", "OptionalParameterList"]},
+    {"ParameterList": ["RequiredParameterList", ",", "RestParameter"]},
+    {"ParameterList": ["OptionalParameterList", ",", "RestParameter"]},
+    {"ParameterList": ["RequiredParameterList", ",", "OptionalParameterList", ",", "RestParameter"]},
+
+    {"RequiredParameterList": ["RequiredParameter"]},
+    {"RequiredParameterList": ["RequiredParameterList", ",", "RequiredParameter"]},
+
+    {"RequiredParameter": ["Identifier",]},
+    {"RequiredParameter": ["Identifier", "TypeAnnotation"]},
+    {"RequiredParameter": ["AccessibilityModifier", "Identifier",]},
+    {"RequiredParameter": ["AccessibilityModifier", "Identifier", "TypeAnnotation"]},
+    {"RequiredParameter": ["Identifier", ":", "StringLiteral"]},
+
+    {"AccessibilityModifier": ["public"]},
+    {"AccessibilityModifier": ["private"]},
+    {"AccessibilityModifier": ["protected"]},
+
+    {"OptionalParameterList": ["OptionalParameter"]},
+    {"OptionalParameterList": ["OptionalParameterList", ",", "OptionalParameter"]},
+
+    {"OptionalParameter": ["Identifier", "?"]},
+    {"OptionalParameter": ["Identifier", "?", "TypeAnnotation"]},
+    {"OptionalParameter": ["AccessibilityModifier", "Identifier", "?"]},
+    {"OptionalParameter": ["AccessibilityModifier", "Identifier", "?", "TypeAnnotation"]},
+    {"OptionalParameter": ["Identifier", "Initializer"]},
+    {"OptionalParameter": ["Identifier", "TypeAnnotation", "Initializer"]},
+    {"OptionalParameter": ["AccessibilityModifier", "Identifier", "Initializer"]},
+    {"OptionalParameter": ["AccessibilityModifier", "Identifier", "TypeAnnotation", "Initializer"]},
+    {"OptionalParameter": ["Identifier", "?", ":", "StringLiteral"]},
+
+    {"RestParameter": ["...", "Identifier"]},
+    {"RestParameter": ["...", "Identifier", "TypeAnnotation"]},
+
+    {"ConstructSignature": ["new", "(", ")"]},
+    {"ConstructSignature": ["new", "(", ")", "TypeAnnotation"]},
+    {"ConstructSignature": ["new", "(", "ParameterList", ")"]},
+    {"ConstructSignature": ["new", "(", "ParameterList", ")", "TypeAnnotation"]},
+    {"ConstructSignature": ["new", "TypeParameters", "(", ")"]},
+    {"ConstructSignature": ["new", "TypeParameters", "(", ")", "TypeAnnotation"]},
+    {"ConstructSignature": ["new", "TypeParameters", "(", "ParameterList", ")"]},
+    {"ConstructSignature": ["new", "TypeParameters", "(", "ParameterList", ")", "TypeAnnotation"]},
+
+    {"IndexSignature": ["[", "Identifier", ":", "string", "]", "TypeAnnotation"]},
+    {"IndexSignature": ["[", "Identifier", ":", "number", "]", "TypeAnnotation"]},
+
+    {"MethodSignature": ["PropertyName", "CallSignature"]},
+    {"MethodSignature": ["PropertyName", "?", "CallSignature"]},
+
+    {"TypeAliasDeclaration": ["type", "Identifier", "=", "Type", ";"]},
+
+    {"Identifier": ["IdentifierName"]},
+    {"PrimaryExpression": ["this"]},
+    {"PrimaryExpression": ["IdentifierReference"]},
+    {"PrimaryExpression": ["Literal"]},
+    {"PrimaryExpression": ["ArrayLiteral"]},
+    {"PrimaryExpression": ["ObjectLiteral"]},
+    {"PrimaryExpression": ["FunctionExpression"]},
+    {"PrimaryExpression": ["ClassExpression"]},
+    {"PrimaryExpression": ["GeneratorExpression"]},
+    {"PrimaryExpression": ["RegularExpressionLiteral"]},
+    {"PrimaryExpression": ["TemplateLiteral"]},
+
+    {"Literal": ["NullLiteral"]},
+    {"Literal": ["BooleanLiteral"]},
+    {"Literal": ["NumericLiteral"]},
+    {"Literal": ["StringLiteral"]},
+
+    {"ArrayLiteral": ["[", "epsilon", "]"]},
+    {"ArrayLiteral": ["[", "ElementList", "]"]},
+
+    {"ObjectLiteral": ["{", "}"]},
+    {"ObjectLiteral": ["{", "PropertyDefinitionList", "}"]},
+    {"ObjectLiteral": ["{", "PropertyDefinitionList", ",", "}"]},
+
+
+    {"PropertyDefinitionList": ["PropertyDefinition"]},
+    {"PropertyDefinitionList": ["PropertyDefinitionList", ",", "PropertyDefinition"]},
+
+    {"PropertyDefinition": ["IdentifierReference"]},
+    {"PropertyDefinition": ["CoverInitializedName"]},
+    {"PropertyDefinition": ["PropertyName", ":", "AssignmentExpression"]},
+    {"PropertyDefinition": ["MethodDefinition"]},
+
+    {"PropertyName": ["LiteralPropertyName"]},
+    {"PropertyName": ["ComputedPropertyName"]},
+
+    {"LiteralPropertyName": ["IdentifierName"]},
+    {"LiteralPropertyName": ["StringLiteral"]},
+    {"LiteralPropertyName": ["NumericLiteral"]},
+
+    {"Initializer": ["=", "AssignmentExpression"]},
+
+    {"NewExpression": ["MemberExpression"]},
+    {"NewExpression": ["new", "NewExpression"]},
+
+    {"CallExpression": ["MemberExpression", "Arguments"]},
+    {"CallExpression": ["SuperCall"]},
+    {"CallExpression": ["CallExpression", "Arguments"]},
+    {"CallExpression": ["CallExpression", "[", "Arguments", "]"]},
+    {"CallExpression": ["CallExpression", ".", "IdentifierName"]},
+    {"CallExpression": ["CallExpression", "TemplateLiteral"]},
+
+    {"ArgumentList": ["AssignmentExpression"]},
+    {"ArgumentList": ["AssignmentExpression"]},
+    {"ArgumentList": ["AssignmentExpression"]},
+
+    {"RelationalExpression": ["ShiftExpression"]},
+    {"RelationalExpression": ["RelationalExpression", "<", "ShiftExpression"]},
+    {"RelationalExpression": ["RelationalExpression", ">", "ShiftExpression"]},
+    {"RelationalExpression": ["RelationalExpression", "<=", "ShiftExpression"]},
+    {"RelationalExpression": ["RelationalExpression", ">=", "ShiftExpression"]},
+    {"RelationalExpression": ["RelationalExpression", "instanceof", "ShiftExpression"]},
+    {"RelationalExpression": ["RelationalExpression", "in", "ShiftExpression"]},
+
+    {"EqualityExpression": ["RelationalExpression"]},
+    {"EqualityExpression": ["EqualityExpression", "==", "RelationalExpression"]},
+    {"EqualityExpression": ["EqualityExpression", "!=", "RelationalExpression"]},
+    {"EqualityExpression": ["EqualityExpression", "===", "RelationalExpression"]},
+    {"EqualityExpression": ["EqualityExpression", "!==", "RelationalExpression"]},
+
+    {"BitwiseANDExpression": ["EqualityExpression"]},
+    {"BitwiseANDExpression": ["BitwiseANDExpression", "&", "EqualityExpression"]},
+
+    {"BitwiseXORExpression": ["BitwiseANDExpression"]},
+    {"BitwiseXORExpression": ["BitwiseXORExpression", "^", "BitwiseANDExpression"]},
+
+    {"BitwiseORExpression": ["BitwiseXORExpression"]},
+    {"BitwiseORExpression": ["BitwiseORExpression", "|", "BitwiseXORExpression"]},
+
+    {"LogicalANDExpression": ["BitwiseORExpression"]},
+    {"LogicalANDExpression": ["LogicalANDExpression", "&&", "BitwiseORExpression"]},
+
+    {"LogicalORExpression": ["LogicalANDExpression"]},
+    {"LogicalORExpression": ["LogicalORExpression", "||", "LogicalANDExpression"]},
+
+    {"ConditionalExpression": ["LogicalORExpression"]},
+    {"ConditionalExpression": ["LogicalORExpression", "?", "AssignmentExpression", ":", "AssignmentExpression"]},
+
+    {"AssignmentExpression": ["ConditionalExpression"]},
+    {"AssignmentExpression": ["ArrowFunction"]},
+    {"AssignmentExpression": ["LeftHandSideExpression", "=", "AssignmentExpression"]},
+    {"AssignmentExpression": ["LeftHandSideExpression", "AssignmentOperator", "AssignmentExpression"]},
+
+    {"AssignmentOperator": ["*="]},
+    {"AssignmentOperator": ["/="]},
+    {"AssignmentOperator": ["%="]},
+    {"AssignmentOperator": ["+="]},
+    {"AssignmentOperator": ["-="]},
+    {"AssignmentOperator": ["<<="]},
+    {"AssignmentOperator": [">>="]},
+    {"AssignmentOperator": [">>>="]},
+    {"AssignmentOperator": ["&="]},
+    {"AssignmentOperator": ["^="]},
+    {"AssignmentOperator": ["|="]},
+
+    {"Expression": ["AssignmentExpression"]},
+    {"Expression": ["Expression", ",", "AssignmentExpression"]},
+
+    {"Statement": ["BlockStatement"]},
+    {"Statement": ["VariableStatement"]},
+    {"Statement": ["EmptyStatement"]},
+    {"Statement": ["ExpressionStatement"]},
+    {"Statement": ["IfStatement"]},
+    {"Statement": ["BreakableStatement"]},
+    {"Statement": ["ContinueStatement"]},
+    {"Statement": ["BreakStatement"]},
+    {"Statement": ["ReturnStatement"]},
+    {"Statement": ["WithStatement"]},
+    {"Statement": ["LabelledStatement"]},
+    {"Statement": ["ThrowStatement"]},
+    {"Statement": ["TryStatement"]},
+    {"Statement": ["DebuggerStatement"]},
+
+    {"Declaration": ["HoistableDeclaration"]},
+    {"Declaration": ["ClassDeclaration"]},
+    {"Declaration": ["LexicalDeclaration"]},
+
+    {"HoistableDeclaration": ["FunctionDeclaration"]},
+    {"HoistableDeclaration": ["GeneratorDeclaration"]},
+
+    {"BreakableStatement": ["IterationStatement"]},
+    {"BreakableStatement": ["SwitchStatement"]},
+
+    {"BlockStatement": ["Block"]},
+
+    {"Block": ["{", "StatementList", "}"]},
+    {"Block": ["{", "}"]},
+
+    {"StatementList": ["StatementListItem"]},
+    {"StatementList": ["StatementList", "StatementListItem"]},
+
+    {"StatementListItem": ["Statement"]},
+    {"StatementListItem": ["Declaration"]},
+
+    {"LexicalDeclaration": ["LetOrConst", "BindingList", ";"]},
+
+    {"LetOrConst": ["let"]},
+    {"LetOrConst": ["const"]},
+
+    {"BindingList": ["LexicalBinding"]},
+    {"BindingList": ["BindingList", ",", "LexicalBinding"]},
+
+    {"LexicalBinding": ["BindingIdentifier", "Initializer"]},
+    {"LexicalBinding": ["BindingPattern", "Initializer"]},
+
+    {"BindingPattern": ["ObjectBindingPattern"]},
+    {"BindingPattern": ["ArrayBindingPattern"]},
+
+    {"ObjectBindingPattern": ["{", "}"]},
+    {"ObjectBindingPattern": ["{", "BindingPropertyList", "}"]},
+    {"ObjectBindingPattern": ["{", "BindingPropertyList", ",", "}"]},
+
+    {"ArrayBindingPatterns": ["[", "]"]},
+    {"ArrayBindingPatterns": ["[", "BindingRestElement", "]"]},
+    {"ArrayBindingPatterns": ["[", "BindingElementList", "]"]},
+    {"ArrayBindingPatterns": ["[", "BindingElementList", ",", "]"]},
+    {"ArrayBindingPatterns": ["[", "BindingElementList", ",", "BindingRestElement", "]"]},
+
+    {"BindingPropertyList": ["BindingProperty"]},
+    {"BindingPropertyList": ["BindingPropertyList", ",", "BindingProperty"]},
+
+    {"BindingElementList": ["BindingElement"]},
+    {"BindingElementList": ["BindingElementList", ",", "BindingElement"]},
+
+    {"BindingProperty": ["SingleNameBinding"]},
+    {"BindingProperty": ["PropertyName", ":", "BindingElement"]},
+
+    {"BindingElement": ["SingleNameBinding"]},
+    {"BindingElement": ["BindingPattern"]},
+    {"BindingElement": ["BindingPattern", "Initializer"]},
+
+    {"SingleNameBinding": ["BindingIdentifier"]},
+    {"SingleNameBinding": ["BindingIdentifier", "Initializer"]},
+
+    {"BindingRestElement": ["...", "BindingIdentifier"]},
+
+    {"EmptyStatement": [";"]},
+
+    {"ExpressionStatement": ["function", "Expression", ";"]},
+    {"ExpressionStatement": ["class", "Expression", ";"]},
+    {"ExpressionStatement": ["let", "Expression", ";"]},
+
+    {"IfStatement": ["if", "(", "Expression", ")", "Statement", "else", "Statement"]},
+    {"IfStatement": ["if", "(", "Expression", ")", "Statement"]},
+
+    {"IterationStatement": ["while", "(", "Expression", ")", "Statement"]},
+    {"IterationStatement": ["for", "(", "Expression", ";", "Expression", ";", "Expression", ")", "Statement"]},
+
+    {"ForDeclaration": ["LetOrConst", "ForBinding"]},
+
+    {"ForBinding": ["BindingIdentifier"]},
+    {"ForBinding": ["BindingPattern"]},
+
+    {"ContinueStatement": ["continue", ";"]},
+    {"ContinueStatement": ["continue"]},
+
+    {"BreakStatement": ["break", ";"]},
+    {"BreakStatement": ["break"]},
+
+    {"ReturnStatement": ["return", ";"]},
+    {"ReturnStatement": ["return"]},
+    {"ReturnStatement": ["Expression"]},
+
+    {"LabelledStatement": ["LabelIdentifier", ":", "LabelledItem"]},
+
+    {"LabelledItem": ["Statement"]},
+    {"LabelledItem": ["FunctionDeclaration"]},
+
+    {"ThrowStatement": ["throw", "Expression"]},
+
+    {"TryStatement": ["try", "Block", "Catch"]},
+    {"TryStatement": ["try", "Block", "Finally"]},
+    {"TryStatement": ["try", "Block", "Catch", "Finally"]},
+
+    {"Catch": ["catch", "(", "CatchParameter", ")", "Block"]},
+
+    {"Finally": ["finally", "Block"]},
+
+    {"CatchParameter": ["BindingIdentifier"]},
+    {"FinaCatchParameterlly": ["BindingPattern"]},
+
+    {"FunctionDeclaration": ["function", "BindingIdentifier", "(", "FormalParameters", ")", "{", "FunctionBody", "}"]},
+    {"FunctionDeclaration": ["function", "(", "FormalParameters", ")", "{", "FunctionBody", "}"]},
+
+    {"FunctionExpression": ["function", "BindingIdentifier", "(", "FormalParameters", ")", "{", "FunctionBody", "}"]},
+
+    {"FunctionBody": ["FunctionStatementList"]},
+
+    {"CatchParameter": ["BindingIdentifier"]},
+
+    {"FunctionStatementList": ["StatementList"]},
+
+    {"ArrowFunction": ["ArrowParameters", "=>", "ConciseBody"]},
+
+    {"ArrowParameters": ["BindingIdentifier"]},
+    {"ArrowParameters": ["CoverParenthesizedExpressionAndArrowParameterList"]},
+
+    {"ConciseBody": ["{", "FunctionBody", "}"]},
+
+    {"MethodDefinition": ["PropertyName", "(", "StrictFormalParameters", ")", "{", "FunctionBody", "}"]},
+    {"MethodDefinition": ["get", "PropertyName", "(", ")", "{", "FunctionBody", "}"]},
+    {"MethodDefinition": ["set", "PropertyName", "(", "PropertySetParameterList", ")", "{", "FunctionBody", "}"]},
+    {"MethodDefinition": ["{", "FunctionBody", "}"]},
+
+    {"PropertySetParameterList": ["FormalParameter"]},
+
+    {"ClassDeclaration": ["class", "BindingIdentifier", "ClassTail"]},
+    {"ClassDeclaration": ["class", "ClassTail"]},
+
+    {"ClassExpression": ["class", "BindingIdentifier", "ClassTail"]},
+    {"ClassExpression": ["class", "ClassTail"]},
+
+    {"ClassTail": ["ClassHeritage", "{", "ClassBody", "}"]},
+    {"ClassTail": ["{", "ClassBody", "}"]},
+    {"ClassTail": ["{", "}"]},
+    {"ClassTail": ["ClassHeritage", "{", "}"]},
+
+    {"ClassHeritage": ["extends", "LeftHandSideExpression"]},
+
+    {"ClassBody": ["ClassElementList"]},
+
+    {"ClassElementList": ["ClassElement"]},
+    {"ClassElementList": ["ClassElementList", "ClassElement"]},
+
+    {"ClassElement": ["MethodDefinition"]},
+    {"ClassElement": ["static", "MethodDefinition"]},
+    {"ClassElement": [";"]}
+  ],
+  "startSymbol": ""
 }

@@ -27,8 +27,6 @@ class Grammar(fileName: String) {
         this.terminals = parsed.terminals
         this.productions = parsed.productions as MutableList<Map<String, List<String>>>
         this.startSymbol = parsed.startSymbol
-
-        println(this.productions)
     }
 
     fun __productionsFor(nonterm: String): List<Map<String, List<String>>> {

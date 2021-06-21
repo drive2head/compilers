@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.4-M2"
     application
+    antlr
 }
 group = "me.garanya"
 version = "1.0-SNAPSHOT"
@@ -17,6 +18,7 @@ dependencies {
     testImplementation(kotlin("test-junit"))
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.beust:klaxon:5.5")
+    antlr("org.antlr:antlr4:4.5")
 }
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
