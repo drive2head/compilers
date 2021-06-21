@@ -3,6 +3,8 @@ grammar Gram ;
 
 //// A1. Types
 
+r: block ;
+
 typeParameters :
 	'<' typeParameterList '>' ;
 
@@ -11,7 +13,7 @@ typeParameterList :
 	| typeParameterList ',' typeParameter ;
 
 typeParameter :
-	identifier constraint? ;
+	Identifier constraint? ;
 
 constraint :
 	'extends' type ;
@@ -34,7 +36,7 @@ type :
 
 primaryOrUnionType :
 	primaryType
-	| unionType
+//	| unionType
 	;
 
 primaryType :
@@ -42,7 +44,7 @@ primaryType :
 	| predefinedType
 	| typeReference
 	| objectType
-	| arrayType
+//	| arrayType
 //	| tupleType
 	| typeQuery
 	;
@@ -62,7 +64,7 @@ typeReference :
 	typeName typeArguments? ;
 
 typeName :
-	identifier ;
+	Identifier ;
 
 objectType :
 	'{'   typeBody?   '}' ;
@@ -83,11 +85,11 @@ typeMember :
 	| methodSignature
 	;
 
-arrayType :
-	primaryType '[' ']' ;
+//arrayType :
+//	primaryType '[' ']' ;
 
-unionType :
-	primaryOrUnionType '|' primaryType ;
+//unionType :
+//	primaryOrUnionType '|' primaryType ;
 
 functionType :
 	typeParameters? '(' parameterList? ')' '=>' type ;
@@ -96,7 +98,7 @@ typeQuery :
 	'typeof' typeQueryExpression ;
 
 typeQueryExpression :
-	identifier
+	Identifier
 	| typeQueryExpression '.' identifierName ;
 
 propertySignature :
@@ -104,8 +106,11 @@ propertySignature :
 
 propertyName :
 	identifierName
-	| StringLiteral
-	| NumericLiteral ;
+//	| StringLiteral
+//	| NumericLiteral
+	;
+
+identifierName : Identifier ;
 
 callSignature :
 	typeParameters? '(' parameterList? ')' typeAnnotation? ;
@@ -124,8 +129,8 @@ requiredParameterList :
 	| requiredParameterList ',' requiredParameter ;
 
 requiredParameter :
-	AccessibilityModifier? identifier typeAnnotation?
-	| identifier ':' StringLiteral ;
+	AccessibilityModifier? Identifier typeAnnotation?
+	| Identifier ':' StringLiteral ;
 
 AccessibilityModifier :
 	'public'
@@ -137,25 +142,25 @@ optionalParameterList :
 	| optionalParameterList ',' optionalParameter ;
 
 optionalParameter :
-	AccessibilityModifier? identifier '?' typeAnnotation?
-	| AccessibilityModifier? identifier typeAnnotation? initializer
-	| identifier '?' ':' StringLiteral ;
+	AccessibilityModifier? Identifier '?' typeAnnotation?
+	| AccessibilityModifier? Identifier typeAnnotation? initializer
+	| Identifier '?' ':' StringLiteral ;
 
 restParameter :
-	'...' identifier typeAnnotation? ;
+	'...' Identifier typeAnnotation? ;
 
 constructSignature :
 	'new' typeParameters? '(' parameterList? ')' typeAnnotation? ;
 
 indexSignature :
-	'[' identifier ':' 'string' ']' typeAnnotation
-	| '[' identifier ':' 'number' ']' typeAnnotation ;
+	'[' Identifier ':' 'string' ']' typeAnnotation
+	| '[' Identifier ':' 'number' ']' typeAnnotation ;
 
 methodSignature :
 	propertyName   '?'?   callSignature ;
 
 typeAliasDeclaration :
-	'type' identifier '=' type ';' ;
+	'type' Identifier '=' type ';' ;
 
 ///// A2. Expressions
 propertyAssignment : // (Modified)
@@ -168,7 +173,7 @@ getAccessor :
 	'get' propertyName '(' ')' typeAnnotation? '{' functionBody '}' ;
 
 setAccessor:
-	'set' propertyName '(' identifier typeAnnotation? ')' '{' functionBody '}' ;
+	'set' propertyName '(' Identifier typeAnnotation? ')' '{' functionBody '}' ;
 
 elementList : // (Modified)
 	elision?  assignmentExpression
@@ -190,7 +195,7 @@ callExpression : // (Modified)
 	| 'super' '.' identifierName ;
 
 functionExpression : // (Modified)
-	'function' identifier? callSignature '{' functionBody '}' ;
+	'function' Identifier? callSignature '{' functionBody '}' ;
 
 // assignmentExpression : // (Modified)
 //	arrowFunctionExpression ;
@@ -204,7 +209,7 @@ block : '{' statementList? '}' ;
 
 arrowFormalParameters :
 	callSignature
-	| identifier ;
+	| Identifier ;
 
 arguments : // (Modified)
 //	typeArguments? '(' argumentList? ')' ;
@@ -219,7 +224,7 @@ variableDeclaration :
     | destructuringVariableDeclaration ;
 
 simpleVariableDeclaration :
-    identifier typeAnnotation? initializer? ;
+    Identifier typeAnnotation? initializer? ;
 
 typeAnnotation :
     ':' type ;
@@ -240,8 +245,8 @@ bindingPropertyList :
     | bindingPropertyList ',' bindingProperty ;
 
 bindingProperty :
-    identifier initializer?
-    | propertyName ':' identifier initializer?
+    Identifier initializer?
+    | propertyName ':' Identifier initializer?
     | propertyName ':' bindingPattern initializer? ;
 
 arrayBindingPattern :
@@ -254,11 +259,11 @@ bindingElementList :
     | bindingElementList ',' elision? bindingElement ;
 
 bindingElement :
-    identifier initializer?
+    Identifier initializer?
     | bindingPattern initializer? ;
 
 bindingRestElement :
-    '...' identifier ;
+    '...' Identifier ;
 
 functionDeclaration :
     functionOverloads? functionImplementation ;
@@ -268,13 +273,13 @@ functionOverloads :
     | functionOverloads functionOverload ;
 
 functionOverload :
-    'function' identifier callSignature ';' ;
+    'function' Identifier callSignature ';' ;
 
 functionImplementation :
-    'function' identifier callSignature '{' functionBody '}' ;
+    'function' Identifier callSignature '{' functionBody '}' ;
 
 interfaceDeclaration :
-    'interface' identifier typeParameters? interfaceExtendsClause? objectType ;
+    'interface' Identifier typeParameters? interfaceExtendsClause? objectType ;
 
 interfaceExtendsClause :
     'extends' classOrInterfaceTypeList ;
@@ -288,7 +293,7 @@ classOrInterfaceType :
 
 
 classDeclaration :
-    'class' identifier typeParameters? classHeritage '{' classBody '}' ;
+    'class' Identifier typeParameters? classHeritage '{' classBody '}' ;
 
 classHeritage :
     classExtendsClause? implementsClause? ;
@@ -357,6 +362,9 @@ indexMemberDeclaration:
 
 /////////// ES6
 
+Identifier : [a-z]+ ([a-z] | [0-9])* ;
+
+/* // хуета какая-то
 identifier :
 //	identifierName | ~ReservedWord ; // ??
     identifierName ;
@@ -380,6 +388,7 @@ identifierPart :
 //	<ZWNJ>
 //	<ZWJ>
     ;
+*/
 
 ReservedWord :
 	| Keyword
@@ -433,7 +442,7 @@ functionStatementList : statementList? ;
 
 statementList :
 	statementListItem |
-	statementList statementListItem ;
+	'##' statementList statementListItem ;
 
 statementListItem :
 	statement |
@@ -492,13 +501,24 @@ initializer :
 	'=' assignmentExpression;
 
 assignmentExpression :
-	ConditionalExpression
-	| YieldExpression
-	| ArrowFunction
-	| LeftHandSideExpression '=' AssignmentExpression
-	| LeftHandSideExpression AssignmentOperator AssignmentExpression ;
+//	ConditionalExpression
+//	| YieldExpression
+//	|
+	arrowFunction
+	| leftHandSideExpression '=' assignmentExpression
+	| leftHandSideExpression AssignmentOperator assignmentExpression ;
 
-bindingIdentifier : identifier ;
+leftHandSideExpression :
+//	NewExpression |
+	callExpression ;
+
+
+bindingIdentifier : Identifier ;
+
+arrowFunction: arrowFunctionExpression;
+
+AssignmentOperator : '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '>>>=' | '&=' | '^=' | '|=' ;
+
 
 
 
