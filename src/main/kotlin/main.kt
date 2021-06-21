@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
     val tokens = CommonTokenStream(lexer)
     println("tokens: ${tokens.tokens}")
     val parser = GramParser(tokens)
-    val tree: ParseTree = parser.r()
+    val tree: ParseTree = parser.prog()
     val walker = ParseTreeWalker()
     walker.walk(GramWalker(), tree)
     println("tree: ${tree}")
