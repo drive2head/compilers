@@ -3,7 +3,9 @@ grammar Gram ;
 
 //// A1. Types
 
-r: block ;
+r: simpleVariableDeclaration ;
+//r: expressionStatement ;
+
 
 typeParameters :
 	'<' typeParameterList '>' ;
@@ -132,6 +134,10 @@ requiredParameter :
 	AccessibilityModifier? Identifier typeAnnotation?
 	| Identifier ':' StringLiteral ;
 
+StringLiteral : Text ;
+
+Text : '"' (' ' | [a-z] | [A-Z])* '"';
+
 AccessibilityModifier :
 	'public'
 	| 'private'
@@ -202,10 +208,11 @@ functionExpression : // (Modified)
 // // МОДИФАЙД БЛЭТ (заменили в TS части assignmentExpression на arrowFunctionExpression сразу)
 
 arrowFunctionExpression :
-	arrowFormalParameters '=>' block
-	| arrowFormalParameters '=>' arrowFunctionExpression ;
+	arrowFormalParameters '=>' block |
+	arrowFormalParameters '=>' arrowFunctionExpression ;
 
-block : '{' statementList? '}' ;
+//block : '{' statementList? '}' ;
+block : '{' statementList '}' ;
 
 arrowFormalParameters :
 	callSignature
@@ -391,7 +398,7 @@ identifierPart :
 */
 
 ReservedWord :
-	| Keyword
+	Keyword
 //	| FutureReservedWord
 	| NullLiteral
 	| BooleanLiteral
@@ -414,7 +421,7 @@ Keyword :
 	| 'extends'
 	| 'return'
 	| 'while'
-	| 'const'
+//	| 'const'
 	| 'finally'
 	| 'super'
 	| 'with'
@@ -436,9 +443,10 @@ Keyword :
 NullLiteral : 'null' ;
 BooleanLiteral : 'true' | 'false' ;
 
-functionBody : functionStatementList ;
+functionBody : '<empty-function>' | functionStatementList ;
 
-functionStatementList : statementList? ;
+//functionStatementList : statementList? ;
+functionStatementList : statementList ;
 
 statementList :
 	statementListItem |
@@ -504,8 +512,8 @@ assignmentExpression :
 //	ConditionalExpression
 //	| YieldExpression
 //	|
-	arrowFunction
-	| leftHandSideExpression '=' assignmentExpression
+//	arrowFunction |
+	leftHandSideExpression '=' assignmentExpression
 	| leftHandSideExpression AssignmentOperator assignmentExpression ;
 
 leftHandSideExpression :
