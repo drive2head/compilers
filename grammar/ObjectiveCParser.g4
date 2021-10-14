@@ -23,7 +23,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-grammar Gram;
+parser grammar ObjectiveCParser;
+
+options { tokenVocab=ObjectiveCLexer; }
 
 translationUnit
     : topLevelDeclaration* EOF
@@ -590,63 +592,55 @@ stringLiteral
 
 identifier
     : IDENTIFIER
-//
-//    | BOOL
-//    | Class
-//    | BYCOPY
-//    | BYREF
-//    | ID
-//    | IMP
-//    | IN
-//    | INOUT
-//    | ONEWAY
-//    | OUT
-//    | PROTOCOL_
-//    | SEL
-//    | SELF
-//    | SUPER
-//    | ATOMIC
-//    | NONATOMIC
-//    | RETAIN
-//
-//    | AUTORELEASING_QUALIFIER
-//    | BLOCK
-//    | BRIDGE_RETAINED
-//    | BRIDGE_TRANSFER
-//    | COVARIANT
-//    | CONTRAVARIANT
-//    | DEPRECATED
-//    | KINDOF
-//    | UNUSED
-//
-//    | NS_INLINE
-//    | NS_ENUM
-//    | NS_OPTIONS
-//
-//    | NULL_UNSPECIFIED
-//    | NULLABLE
-//    | NONNULL
-//    | NULL_RESETTABLE
-//
-//    | ASSIGN
-//    | COPY
-//    | GETTER
-//    | SETTER
-//    | STRONG
-//    | READONLY
-//    | READWRITE
-//    | WEAK
-//    | UNSAFE_UNRETAINED
-//
-//    | IB_OUTLET
-//    | IB_OUTLET_COLLECTION
-//    | IB_INSPECTABLE
-//    | IB_DESIGNABLE
+    | BOOL
+    | Class
+    | BYCOPY
+    | BYREF
+    | ID
+    | IMP
+    | IN
+    | INOUT
+    | ONEWAY
+    | OUT
+    | PROTOCOL_
+    | SEL
+    | SELF
+    | SUPER
+    | ATOMIC
+    | NONATOMIC
+    | RETAIN
+
+    | AUTORELEASING_QUALIFIER
+    | BLOCK
+    | BRIDGE_RETAINED
+    | BRIDGE_TRANSFER
+    | COVARIANT
+    | CONTRAVARIANT
+    | DEPRECATED
+    | KINDOF
+    | UNUSED
+
+    | NS_INLINE
+    | NS_ENUM
+    | NS_OPTIONS
+
+    | NULL_UNSPECIFIED
+    | NULLABLE
+    | NONNULL
+    | NULL_RESETTABLE
+
+    | ASSIGN
+    | COPY
+    | GETTER
+    | SETTER
+    | STRONG
+    | READONLY
+    | READWRITE
+    | WEAK
+    | UNSAFE_UNRETAINED
+
+    | IB_OUTLET
+    | IB_OUTLET_COLLECTION
+    | IB_INSPECTABLE
+    | IB_DESIGNABLE
     ;
-
-IDENTIFIER : ([a-z])+ ([a-z] | [A-Z] | [0-9])* ;
-
-DECIMAL_LITERAL : [0-9]+ ;
-
-LP: '(' ;
-RP: ')' ;
