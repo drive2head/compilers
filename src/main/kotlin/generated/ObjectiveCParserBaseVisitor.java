@@ -1,756 +1,756 @@
-// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/Gram.g4 by ANTLR 4.9.1
-package mypackage;
+// Generated from /Users/stroom/GitHub/compilers/grammar/ObjectiveCParser.g4 by ANTLR 4.9.1
+package generated;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link GramVisitor},
+ * This class provides an empty implementation of {@link ObjectiveCParserVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-public class GramBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements GramVisitor<T> {
+public class ObjectiveCParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements ObjectiveCParserVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTranslationUnit(GramParser.TranslationUnitContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTranslationUnit(ObjectiveCParser.TranslationUnitContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTopLevelDeclaration(GramParser.TopLevelDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTopLevelDeclaration(ObjectiveCParser.TopLevelDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProtocolList(GramParser.ProtocolListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProtocolList(ObjectiveCParser.ProtocolListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProtocolName(GramParser.ProtocolNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProtocolName(ObjectiveCParser.ProtocolNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSelector(GramParser.SelectorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSelector(ObjectiveCParser.SelectorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlockType(GramParser.BlockTypeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlockType(ObjectiveCParser.BlockTypeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDictionaryExpression(GramParser.DictionaryExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDictionaryExpression(ObjectiveCParser.DictionaryExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDictionaryPair(GramParser.DictionaryPairContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDictionaryPair(ObjectiveCParser.DictionaryPairContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArrayExpression(GramParser.ArrayExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArrayExpression(ObjectiveCParser.ArrayExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlockParameters(GramParser.BlockParametersContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlockParameters(ObjectiveCParser.BlockParametersContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeVariableDeclaratorOrName(GramParser.TypeVariableDeclaratorOrNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeVariableDeclaratorOrName(ObjectiveCParser.TypeVariableDeclaratorOrNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlockExpression(GramParser.BlockExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlockExpression(ObjectiveCParser.BlockExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMessageExpression(GramParser.MessageExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMessageExpression(ObjectiveCParser.MessageExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitReceiver(GramParser.ReceiverContext ctx) { return visitChildren(ctx); }
+	@Override public T visitReceiver(ObjectiveCParser.ReceiverContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMessageSelector(GramParser.MessageSelectorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMessageSelector(ObjectiveCParser.MessageSelectorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitKeywordArgument(GramParser.KeywordArgumentContext ctx) { return visitChildren(ctx); }
+	@Override public T visitKeywordArgument(ObjectiveCParser.KeywordArgumentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitKeywordArgumentType(GramParser.KeywordArgumentTypeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitKeywordArgumentType(ObjectiveCParser.KeywordArgumentTypeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSelectorExpression(GramParser.SelectorExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSelectorExpression(ObjectiveCParser.SelectorExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSelectorName(GramParser.SelectorNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSelectorName(ObjectiveCParser.SelectorNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProtocolExpression(GramParser.ProtocolExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProtocolExpression(ObjectiveCParser.ProtocolExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEncodeExpression(GramParser.EncodeExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEncodeExpression(ObjectiveCParser.EncodeExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeVariableDeclarator(GramParser.TypeVariableDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeVariableDeclarator(ObjectiveCParser.TypeVariableDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitThrowStatement(GramParser.ThrowStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitThrowStatement(ObjectiveCParser.ThrowStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTryBlock(GramParser.TryBlockContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTryBlock(ObjectiveCParser.TryBlockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCatchStatement(GramParser.CatchStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCatchStatement(ObjectiveCParser.CatchStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSynchronizedStatement(GramParser.SynchronizedStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSynchronizedStatement(ObjectiveCParser.SynchronizedStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAutoreleaseStatement(GramParser.AutoreleaseStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAutoreleaseStatement(ObjectiveCParser.AutoreleaseStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionDeclaration(GramParser.FunctionDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionDeclaration(ObjectiveCParser.FunctionDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionDefinition(GramParser.FunctionDefinitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionDefinition(ObjectiveCParser.FunctionDefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionSignature(GramParser.FunctionSignatureContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionSignature(ObjectiveCParser.FunctionSignatureContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttribute(GramParser.AttributeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttribute(ObjectiveCParser.AttributeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeName(GramParser.AttributeNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributeName(ObjectiveCParser.AttributeNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeParameters(GramParser.AttributeParametersContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributeParameters(ObjectiveCParser.AttributeParametersContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeParameterList(GramParser.AttributeParameterListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributeParameterList(ObjectiveCParser.AttributeParameterListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeParameter(GramParser.AttributeParameterContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributeParameter(ObjectiveCParser.AttributeParameterContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeParameterAssignment(GramParser.AttributeParameterAssignmentContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributeParameterAssignment(ObjectiveCParser.AttributeParameterAssignmentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclaration(GramParser.DeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclaration(ObjectiveCParser.DeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionCallExpression(GramParser.FunctionCallExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionCallExpression(ObjectiveCParser.FunctionCallExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumDeclaration(GramParser.EnumDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumDeclaration(ObjectiveCParser.EnumDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVarDeclaration(GramParser.VarDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitVarDeclaration(ObjectiveCParser.VarDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypedefDeclaration(GramParser.TypedefDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypedefDeclaration(ObjectiveCParser.TypedefDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeDeclaratorList(GramParser.TypeDeclaratorListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeDeclaratorList(ObjectiveCParser.TypeDeclaratorListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeDeclarator(GramParser.TypeDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeDeclarator(ObjectiveCParser.TypeDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclarationSpecifiers(GramParser.DeclarationSpecifiersContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclarationSpecifiers(ObjectiveCParser.DeclarationSpecifiersContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeSpecifier(GramParser.AttributeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributeSpecifier(ObjectiveCParser.AttributeSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitDeclaratorList(GramParser.InitDeclaratorListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitDeclaratorList(ObjectiveCParser.InitDeclaratorListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitDeclarator(GramParser.InitDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitDeclarator(ObjectiveCParser.InitDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSpecifierQualifierList(GramParser.SpecifierQualifierListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSpecifierQualifierList(ObjectiveCParser.SpecifierQualifierListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIbOutletQualifier(GramParser.IbOutletQualifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIbOutletQualifier(ObjectiveCParser.IbOutletQualifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArcBehaviourSpecifier(GramParser.ArcBehaviourSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArcBehaviourSpecifier(ObjectiveCParser.ArcBehaviourSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNullabilitySpecifier(GramParser.NullabilitySpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNullabilitySpecifier(ObjectiveCParser.NullabilitySpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStorageClassSpecifier(GramParser.StorageClassSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStorageClassSpecifier(ObjectiveCParser.StorageClassSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypePrefix(GramParser.TypePrefixContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypePrefix(ObjectiveCParser.TypePrefixContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeQualifier(GramParser.TypeQualifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeQualifier(ObjectiveCParser.TypeQualifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProtocolQualifier(GramParser.ProtocolQualifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProtocolQualifier(ObjectiveCParser.ProtocolQualifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeSpecifier(GramParser.TypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeSpecifier(ObjectiveCParser.TypeSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeofExpression(GramParser.TypeofExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeofExpression(ObjectiveCParser.TypeofExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumSpecifier(GramParser.EnumSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumSpecifier(ObjectiveCParser.EnumSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumeratorList(GramParser.EnumeratorListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumeratorList(ObjectiveCParser.EnumeratorListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumerator(GramParser.EnumeratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumerator(ObjectiveCParser.EnumeratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumeratorIdentifier(GramParser.EnumeratorIdentifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumeratorIdentifier(ObjectiveCParser.EnumeratorIdentifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDirectDeclarator(GramParser.DirectDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDirectDeclarator(ObjectiveCParser.DirectDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclaratorSuffix(GramParser.DeclaratorSuffixContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclaratorSuffix(ObjectiveCParser.DeclaratorSuffixContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameterList(GramParser.ParameterListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterList(ObjectiveCParser.ParameterListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPointer(GramParser.PointerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPointer(ObjectiveCParser.PointerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArrayInitializer(GramParser.ArrayInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArrayInitializer(ObjectiveCParser.ArrayInitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStructInitializer(GramParser.StructInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructInitializer(ObjectiveCParser.StructInitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitializerList(GramParser.InitializerListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializerList(ObjectiveCParser.InitializerListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeName(GramParser.TypeNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeName(ObjectiveCParser.TypeNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAbstractDeclarator(GramParser.AbstractDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAbstractDeclarator(ObjectiveCParser.AbstractDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAbstractDeclaratorSuffix(GramParser.AbstractDeclaratorSuffixContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAbstractDeclaratorSuffix(ObjectiveCParser.AbstractDeclaratorSuffixContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameterDeclarationList(GramParser.ParameterDeclarationListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterDeclarationList(ObjectiveCParser.ParameterDeclarationListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameterDeclaration(GramParser.ParameterDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterDeclaration(ObjectiveCParser.ParameterDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclarator(GramParser.DeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclarator(ObjectiveCParser.DeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement(GramParser.StatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatement(ObjectiveCParser.StatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLabeledStatement(GramParser.LabeledStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLabeledStatement(ObjectiveCParser.LabeledStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRangeExpression(GramParser.RangeExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRangeExpression(ObjectiveCParser.RangeExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCompoundStatement(GramParser.CompoundStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCompoundStatement(ObjectiveCParser.CompoundStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSelectionStatement(GramParser.SelectionStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSelectionStatement(ObjectiveCParser.SelectionStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSwitchStatement(GramParser.SwitchStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSwitchStatement(ObjectiveCParser.SwitchStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSwitchBlock(GramParser.SwitchBlockContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSwitchBlock(ObjectiveCParser.SwitchBlockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSwitchSection(GramParser.SwitchSectionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSwitchSection(ObjectiveCParser.SwitchSectionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSwitchLabel(GramParser.SwitchLabelContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSwitchLabel(ObjectiveCParser.SwitchLabelContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIterationStatement(GramParser.IterationStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIterationStatement(ObjectiveCParser.IterationStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitWhileStatement(GramParser.WhileStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWhileStatement(ObjectiveCParser.WhileStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDoStatement(GramParser.DoStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDoStatement(ObjectiveCParser.DoStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitForStatement(GramParser.ForStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForStatement(ObjectiveCParser.ForStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitForLoopInitializer(GramParser.ForLoopInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForLoopInitializer(ObjectiveCParser.ForLoopInitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitForInStatement(GramParser.ForInStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForInStatement(ObjectiveCParser.ForInStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitJumpStatement(GramParser.JumpStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitJumpStatement(ObjectiveCParser.JumpStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressions(GramParser.ExpressionsContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressions(ObjectiveCParser.ExpressionsContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression(GramParser.ExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpression(ObjectiveCParser.ExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignmentOperator(GramParser.AssignmentOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignmentOperator(ObjectiveCParser.AssignmentOperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCastExpression(GramParser.CastExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCastExpression(ObjectiveCParser.CastExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitializer(GramParser.InitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializer(ObjectiveCParser.InitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConstantExpression(GramParser.ConstantExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConstantExpression(ObjectiveCParser.ConstantExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnaryExpression(GramParser.UnaryExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnaryExpression(ObjectiveCParser.UnaryExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnaryOperator(GramParser.UnaryOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnaryOperator(ObjectiveCParser.UnaryOperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPostfixExpression(GramParser.PostfixExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPostfixExpression(ObjectiveCParser.PostfixExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPostfix(GramParser.PostfixContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPostfix(ObjectiveCParser.PostfixContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArgumentExpressionList(GramParser.ArgumentExpressionListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArgumentExpressionList(ObjectiveCParser.ArgumentExpressionListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArgumentExpression(GramParser.ArgumentExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArgumentExpression(ObjectiveCParser.ArgumentExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrimaryExpression(GramParser.PrimaryExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrimaryExpression(ObjectiveCParser.PrimaryExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConstant(GramParser.ConstantContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConstant(ObjectiveCParser.ConstantContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStringLiteral(GramParser.StringLiteralContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStringLiteral(ObjectiveCParser.StringLiteralContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIdentifier(GramParser.IdentifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIdentifier(ObjectiveCParser.IdentifierContext ctx) { return visitChildren(ctx); }
 }
