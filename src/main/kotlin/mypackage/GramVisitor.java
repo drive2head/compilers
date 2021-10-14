@@ -1,4 +1,5 @@
-// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
+// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/Gram.g4 by ANTLR 4.9.1
+package mypackage;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -10,371 +11,167 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface GramVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link GramParser#r}.
+	 * Visit a parse tree produced by {@link GramParser#translationUnit}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitR(GramParser.RContext ctx);
+	T visitTranslationUnit(GramParser.TranslationUnitContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeParameters}.
+	 * Visit a parse tree produced by {@link GramParser#topLevelDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeParameters(GramParser.TypeParametersContext ctx);
+	T visitTopLevelDeclaration(GramParser.TopLevelDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeParameterList}.
+	 * Visit a parse tree produced by {@link GramParser#protocolList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeParameterList(GramParser.TypeParameterListContext ctx);
+	T visitProtocolList(GramParser.ProtocolListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeParameter}.
+	 * Visit a parse tree produced by {@link GramParser#protocolName}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeParameter(GramParser.TypeParameterContext ctx);
+	T visitProtocolName(GramParser.ProtocolNameContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#constraint}.
+	 * Visit a parse tree produced by {@link GramParser#selector}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstraint(GramParser.ConstraintContext ctx);
+	T visitSelector(GramParser.SelectorContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeArguments}.
+	 * Visit a parse tree produced by {@link GramParser#blockType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeArguments(GramParser.TypeArgumentsContext ctx);
+	T visitBlockType(GramParser.BlockTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeArgumentList}.
+	 * Visit a parse tree produced by {@link GramParser#dictionaryExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeArgumentList(GramParser.TypeArgumentListContext ctx);
+	T visitDictionaryExpression(GramParser.DictionaryExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeArgument}.
+	 * Visit a parse tree produced by {@link GramParser#dictionaryPair}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeArgument(GramParser.TypeArgumentContext ctx);
+	T visitDictionaryPair(GramParser.DictionaryPairContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#type}.
+	 * Visit a parse tree produced by {@link GramParser#arrayExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitType(GramParser.TypeContext ctx);
+	T visitArrayExpression(GramParser.ArrayExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#primaryOrUnionType}.
+	 * Visit a parse tree produced by {@link GramParser#blockParameters}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrimaryOrUnionType(GramParser.PrimaryOrUnionTypeContext ctx);
+	T visitBlockParameters(GramParser.BlockParametersContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#primaryType}.
+	 * Visit a parse tree produced by {@link GramParser#typeVariableDeclaratorOrName}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrimaryType(GramParser.PrimaryTypeContext ctx);
+	T visitTypeVariableDeclaratorOrName(GramParser.TypeVariableDeclaratorOrNameContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#parenthesizedType}.
+	 * Visit a parse tree produced by {@link GramParser#blockExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParenthesizedType(GramParser.ParenthesizedTypeContext ctx);
+	T visitBlockExpression(GramParser.BlockExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#predefinedType}.
+	 * Visit a parse tree produced by {@link GramParser#messageExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPredefinedType(GramParser.PredefinedTypeContext ctx);
+	T visitMessageExpression(GramParser.MessageExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeReference}.
+	 * Visit a parse tree produced by {@link GramParser#receiver}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeReference(GramParser.TypeReferenceContext ctx);
+	T visitReceiver(GramParser.ReceiverContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeName}.
+	 * Visit a parse tree produced by {@link GramParser#messageSelector}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeName(GramParser.TypeNameContext ctx);
+	T visitMessageSelector(GramParser.MessageSelectorContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#objectType}.
+	 * Visit a parse tree produced by {@link GramParser#keywordArgument}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitObjectType(GramParser.ObjectTypeContext ctx);
+	T visitKeywordArgument(GramParser.KeywordArgumentContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeBody}.
+	 * Visit a parse tree produced by {@link GramParser#keywordArgumentType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeBody(GramParser.TypeBodyContext ctx);
+	T visitKeywordArgumentType(GramParser.KeywordArgumentTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeMemberList}.
+	 * Visit a parse tree produced by {@link GramParser#selectorExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeMemberList(GramParser.TypeMemberListContext ctx);
+	T visitSelectorExpression(GramParser.SelectorExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeMember}.
+	 * Visit a parse tree produced by {@link GramParser#selectorName}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeMember(GramParser.TypeMemberContext ctx);
+	T visitSelectorName(GramParser.SelectorNameContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#functionType}.
+	 * Visit a parse tree produced by {@link GramParser#protocolExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionType(GramParser.FunctionTypeContext ctx);
+	T visitProtocolExpression(GramParser.ProtocolExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeQuery}.
+	 * Visit a parse tree produced by {@link GramParser#encodeExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeQuery(GramParser.TypeQueryContext ctx);
+	T visitEncodeExpression(GramParser.EncodeExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#typeQueryExpression}.
+	 * Visit a parse tree produced by {@link GramParser#typeVariableDeclarator}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeQueryExpression(GramParser.TypeQueryExpressionContext ctx);
+	T visitTypeVariableDeclarator(GramParser.TypeVariableDeclaratorContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#propertySignature}.
+	 * Visit a parse tree produced by {@link GramParser#throwStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPropertySignature(GramParser.PropertySignatureContext ctx);
+	T visitThrowStatement(GramParser.ThrowStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#propertyName}.
+	 * Visit a parse tree produced by {@link GramParser#tryBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPropertyName(GramParser.PropertyNameContext ctx);
+	T visitTryBlock(GramParser.TryBlockContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#identifierName}.
+	 * Visit a parse tree produced by {@link GramParser#catchStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIdentifierName(GramParser.IdentifierNameContext ctx);
+	T visitCatchStatement(GramParser.CatchStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#callSignature}.
+	 * Visit a parse tree produced by {@link GramParser#synchronizedStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCallSignature(GramParser.CallSignatureContext ctx);
+	T visitSynchronizedStatement(GramParser.SynchronizedStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#parameterList}.
+	 * Visit a parse tree produced by {@link GramParser#autoreleaseStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParameterList(GramParser.ParameterListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#requiredParameterList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRequiredParameterList(GramParser.RequiredParameterListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#requiredParameter}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRequiredParameter(GramParser.RequiredParameterContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#optionalParameterList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitOptionalParameterList(GramParser.OptionalParameterListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#optionalParameter}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitOptionalParameter(GramParser.OptionalParameterContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#restParameter}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRestParameter(GramParser.RestParameterContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#constructSignature}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructSignature(GramParser.ConstructSignatureContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#indexSignature}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIndexSignature(GramParser.IndexSignatureContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#methodSignature}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMethodSignature(GramParser.MethodSignatureContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#typeAliasDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeAliasDeclaration(GramParser.TypeAliasDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#propertyAssignment}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPropertyAssignment(GramParser.PropertyAssignmentContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#getAccessor}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitGetAccessor(GramParser.GetAccessorContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#setAccessor}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSetAccessor(GramParser.SetAccessorContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#elementList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElementList(GramParser.ElementListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#elision}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElision(GramParser.ElisionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#spreadElement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSpreadElement(GramParser.SpreadElementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#callExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCallExpression(GramParser.CallExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#functionExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionExpression(GramParser.FunctionExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#arrowFunctionExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitArrowFunctionExpression(GramParser.ArrowFunctionExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#block}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBlock(GramParser.BlockContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#arrowFormalParameters}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitArrowFormalParameters(GramParser.ArrowFormalParametersContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#arguments}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitArguments(GramParser.ArgumentsContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#unaryExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitUnaryExpression(GramParser.UnaryExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#variableDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariableDeclaration(GramParser.VariableDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#simpleVariableDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSimpleVariableDeclaration(GramParser.SimpleVariableDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#typeAnnotation}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeAnnotation(GramParser.TypeAnnotationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#destructuringVariableDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDestructuringVariableDeclaration(GramParser.DestructuringVariableDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingPattern}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBindingPattern(GramParser.BindingPatternContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#objectBindingPattern}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitObjectBindingPattern(GramParser.ObjectBindingPatternContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingPropertyList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBindingPropertyList(GramParser.BindingPropertyListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingProperty}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBindingProperty(GramParser.BindingPropertyContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#arrayBindingPattern}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitArrayBindingPattern(GramParser.ArrayBindingPatternContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingElementList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBindingElementList(GramParser.BindingElementListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingElement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBindingElement(GramParser.BindingElementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingRestElement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBindingRestElement(GramParser.BindingRestElementContext ctx);
+	T visitAutoreleaseStatement(GramParser.AutoreleaseStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GramParser#functionDeclaration}.
 	 * @param ctx the parse tree
@@ -382,215 +179,53 @@ public interface GramVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFunctionDeclaration(GramParser.FunctionDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#functionOverloads}.
+	 * Visit a parse tree produced by {@link GramParser#functionDefinition}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionOverloads(GramParser.FunctionOverloadsContext ctx);
+	T visitFunctionDefinition(GramParser.FunctionDefinitionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#functionOverload}.
+	 * Visit a parse tree produced by {@link GramParser#functionSignature}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionOverload(GramParser.FunctionOverloadContext ctx);
+	T visitFunctionSignature(GramParser.FunctionSignatureContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#functionImplementation}.
+	 * Visit a parse tree produced by {@link GramParser#attribute}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionImplementation(GramParser.FunctionImplementationContext ctx);
+	T visitAttribute(GramParser.AttributeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#interfaceDeclaration}.
+	 * Visit a parse tree produced by {@link GramParser#attributeName}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInterfaceDeclaration(GramParser.InterfaceDeclarationContext ctx);
+	T visitAttributeName(GramParser.AttributeNameContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#interfaceExtendsClause}.
+	 * Visit a parse tree produced by {@link GramParser#attributeParameters}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInterfaceExtendsClause(GramParser.InterfaceExtendsClauseContext ctx);
+	T visitAttributeParameters(GramParser.AttributeParametersContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#classOrInterfaceTypeList}.
+	 * Visit a parse tree produced by {@link GramParser#attributeParameterList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassOrInterfaceTypeList(GramParser.ClassOrInterfaceTypeListContext ctx);
+	T visitAttributeParameterList(GramParser.AttributeParameterListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#classOrInterfaceType}.
+	 * Visit a parse tree produced by {@link GramParser#attributeParameter}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassOrInterfaceType(GramParser.ClassOrInterfaceTypeContext ctx);
+	T visitAttributeParameter(GramParser.AttributeParameterContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#classDeclaration}.
+	 * Visit a parse tree produced by {@link GramParser#attributeParameterAssignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassDeclaration(GramParser.ClassDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#classHeritage}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassHeritage(GramParser.ClassHeritageContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#classExtendsClause}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassExtendsClause(GramParser.ClassExtendsClauseContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#classType}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassType(GramParser.ClassTypeContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#implementsClause}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitImplementsClause(GramParser.ImplementsClauseContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#classBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassBody(GramParser.ClassBodyContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#classElements}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassElements(GramParser.ClassElementsContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#classElement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassElement(GramParser.ClassElementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#constructorDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructorDeclaration(GramParser.ConstructorDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#constructorOverloads}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructorOverloads(GramParser.ConstructorOverloadsContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#constructorOverload}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructorOverload(GramParser.ConstructorOverloadContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#constructorImplementation}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructorImplementation(GramParser.ConstructorImplementationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#propertyMemberDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPropertyMemberDeclaration(GramParser.PropertyMemberDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#memberVariableDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMemberVariableDeclaration(GramParser.MemberVariableDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#memberFunctionDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMemberFunctionDeclaration(GramParser.MemberFunctionDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#memberFunctionOverloads}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMemberFunctionOverloads(GramParser.MemberFunctionOverloadsContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#memberFunctionOverload}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMemberFunctionOverload(GramParser.MemberFunctionOverloadContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#memberFunctionImplementation}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMemberFunctionImplementation(GramParser.MemberFunctionImplementationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#memberAccessorDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMemberAccessorDeclaration(GramParser.MemberAccessorDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#indexMemberDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIndexMemberDeclaration(GramParser.IndexMemberDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#functionBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionBody(GramParser.FunctionBodyContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#functionStatementList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionStatementList(GramParser.FunctionStatementListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#statementList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStatementList(GramParser.StatementListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#statementListItem}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStatementListItem(GramParser.StatementListItemContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStatement(GramParser.StatementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#blockStatement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBlockStatement(GramParser.BlockStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#expressionStatement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpressionStatement(GramParser.ExpressionStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GramParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpression(GramParser.ExpressionContext ctx);
+	T visitAttributeParameterAssignment(GramParser.AttributeParameterAssignmentContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GramParser#declaration}.
 	 * @param ctx the parse tree
@@ -598,35 +233,347 @@ public interface GramVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeclaration(GramParser.DeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#hoistableDeclaration}.
+	 * Visit a parse tree produced by {@link GramParser#functionCallExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitHoistableDeclaration(GramParser.HoistableDeclarationContext ctx);
+	T visitFunctionCallExpression(GramParser.FunctionCallExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#lexicalDeclaration}.
+	 * Visit a parse tree produced by {@link GramParser#enumDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLexicalDeclaration(GramParser.LexicalDeclarationContext ctx);
+	T visitEnumDeclaration(GramParser.EnumDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#letOrConst}.
+	 * Visit a parse tree produced by {@link GramParser#varDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLetOrConst(GramParser.LetOrConstContext ctx);
+	T visitVarDeclaration(GramParser.VarDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingList}.
+	 * Visit a parse tree produced by {@link GramParser#typedefDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBindingList(GramParser.BindingListContext ctx);
+	T visitTypedefDeclaration(GramParser.TypedefDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#lexicalBinding}.
+	 * Visit a parse tree produced by {@link GramParser#typeDeclaratorList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLexicalBinding(GramParser.LexicalBindingContext ctx);
+	T visitTypeDeclaratorList(GramParser.TypeDeclaratorListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#typeDeclarator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeDeclarator(GramParser.TypeDeclaratorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#declarationSpecifiers}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclarationSpecifiers(GramParser.DeclarationSpecifiersContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#attributeSpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAttributeSpecifier(GramParser.AttributeSpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#initDeclaratorList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInitDeclaratorList(GramParser.InitDeclaratorListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#initDeclarator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInitDeclarator(GramParser.InitDeclaratorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#specifierQualifierList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSpecifierQualifierList(GramParser.SpecifierQualifierListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#ibOutletQualifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIbOutletQualifier(GramParser.IbOutletQualifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#arcBehaviourSpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArcBehaviourSpecifier(GramParser.ArcBehaviourSpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#nullabilitySpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNullabilitySpecifier(GramParser.NullabilitySpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#storageClassSpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStorageClassSpecifier(GramParser.StorageClassSpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#typePrefix}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypePrefix(GramParser.TypePrefixContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#typeQualifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeQualifier(GramParser.TypeQualifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#protocolQualifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitProtocolQualifier(GramParser.ProtocolQualifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#typeSpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeSpecifier(GramParser.TypeSpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#typeofExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeofExpression(GramParser.TypeofExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#enumSpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEnumSpecifier(GramParser.EnumSpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#enumeratorList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEnumeratorList(GramParser.EnumeratorListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#enumerator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEnumerator(GramParser.EnumeratorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#enumeratorIdentifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEnumeratorIdentifier(GramParser.EnumeratorIdentifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#directDeclarator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDirectDeclarator(GramParser.DirectDeclaratorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#declaratorSuffix}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclaratorSuffix(GramParser.DeclaratorSuffixContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#parameterList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameterList(GramParser.ParameterListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#pointer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPointer(GramParser.PointerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#arrayInitializer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArrayInitializer(GramParser.ArrayInitializerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#structInitializer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStructInitializer(GramParser.StructInitializerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#initializerList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInitializerList(GramParser.InitializerListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#typeName}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeName(GramParser.TypeNameContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#abstractDeclarator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAbstractDeclarator(GramParser.AbstractDeclaratorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#abstractDeclaratorSuffix}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAbstractDeclaratorSuffix(GramParser.AbstractDeclaratorSuffixContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#parameterDeclarationList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameterDeclarationList(GramParser.ParameterDeclarationListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#parameterDeclaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameterDeclaration(GramParser.ParameterDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#declarator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclarator(GramParser.DeclaratorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatement(GramParser.StatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#labeledStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLabeledStatement(GramParser.LabeledStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#rangeExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRangeExpression(GramParser.RangeExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#compoundStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCompoundStatement(GramParser.CompoundStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#selectionStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSelectionStatement(GramParser.SelectionStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#switchStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSwitchStatement(GramParser.SwitchStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#switchBlock}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSwitchBlock(GramParser.SwitchBlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#switchSection}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSwitchSection(GramParser.SwitchSectionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#switchLabel}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSwitchLabel(GramParser.SwitchLabelContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIterationStatement(GramParser.IterationStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#whileStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhileStatement(GramParser.WhileStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#doStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDoStatement(GramParser.DoStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#forStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForStatement(GramParser.ForStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#forLoopInitializer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForLoopInitializer(GramParser.ForLoopInitializerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#forInStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForInStatement(GramParser.ForInStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#jumpStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitJumpStatement(GramParser.JumpStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#expressions}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpressions(GramParser.ExpressionsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpression(GramParser.ExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#assignmentOperator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignmentOperator(GramParser.AssignmentOperatorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#castExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCastExpression(GramParser.CastExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GramParser#initializer}.
 	 * @param ctx the parse tree
@@ -634,27 +581,69 @@ public interface GramVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitInitializer(GramParser.InitializerContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#assignmentExpression}.
+	 * Visit a parse tree produced by {@link GramParser#constantExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignmentExpression(GramParser.AssignmentExpressionContext ctx);
+	T visitConstantExpression(GramParser.ConstantExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#leftHandSideExpression}.
+	 * Visit a parse tree produced by {@link GramParser#unaryExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLeftHandSideExpression(GramParser.LeftHandSideExpressionContext ctx);
+	T visitUnaryExpression(GramParser.UnaryExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#bindingIdentifier}.
+	 * Visit a parse tree produced by {@link GramParser#unaryOperator}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBindingIdentifier(GramParser.BindingIdentifierContext ctx);
+	T visitUnaryOperator(GramParser.UnaryOperatorContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GramParser#arrowFunction}.
+	 * Visit a parse tree produced by {@link GramParser#postfixExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArrowFunction(GramParser.ArrowFunctionContext ctx);
+	T visitPostfixExpression(GramParser.PostfixExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#postfix}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPostfix(GramParser.PostfixContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#argumentExpressionList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArgumentExpressionList(GramParser.ArgumentExpressionListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#argumentExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArgumentExpression(GramParser.ArgumentExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#primaryExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPrimaryExpression(GramParser.PrimaryExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#constant}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitConstant(GramParser.ConstantContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#stringLiteral}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStringLiteral(GramParser.StringLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GramParser#identifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdentifier(GramParser.IdentifierContext ctx);
 }

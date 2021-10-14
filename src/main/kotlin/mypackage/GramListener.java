@@ -1,4 +1,5 @@
-// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/mypackage/Gram.g4 by ANTLR 4.9.1
+// Generated from /Users/garanya/Desktop/Учеба/Компиляторы/compilers/src/main/kotlin/Gram.g4 by ANTLR 4.9.1
+package mypackage;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -7,615 +8,275 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface GramListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link GramParser#r}.
+	 * Enter a parse tree produced by {@link GramParser#translationUnit}.
 	 * @param ctx the parse tree
 	 */
-	void enterR(GramParser.RContext ctx);
+	void enterTranslationUnit(GramParser.TranslationUnitContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#r}.
+	 * Exit a parse tree produced by {@link GramParser#translationUnit}.
 	 * @param ctx the parse tree
 	 */
-	void exitR(GramParser.RContext ctx);
+	void exitTranslationUnit(GramParser.TranslationUnitContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeParameters}.
+	 * Enter a parse tree produced by {@link GramParser#topLevelDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeParameters(GramParser.TypeParametersContext ctx);
+	void enterTopLevelDeclaration(GramParser.TopLevelDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeParameters}.
+	 * Exit a parse tree produced by {@link GramParser#topLevelDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeParameters(GramParser.TypeParametersContext ctx);
+	void exitTopLevelDeclaration(GramParser.TopLevelDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeParameterList}.
+	 * Enter a parse tree produced by {@link GramParser#protocolList}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeParameterList(GramParser.TypeParameterListContext ctx);
+	void enterProtocolList(GramParser.ProtocolListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeParameterList}.
+	 * Exit a parse tree produced by {@link GramParser#protocolList}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeParameterList(GramParser.TypeParameterListContext ctx);
+	void exitProtocolList(GramParser.ProtocolListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeParameter}.
+	 * Enter a parse tree produced by {@link GramParser#protocolName}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeParameter(GramParser.TypeParameterContext ctx);
+	void enterProtocolName(GramParser.ProtocolNameContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeParameter}.
+	 * Exit a parse tree produced by {@link GramParser#protocolName}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeParameter(GramParser.TypeParameterContext ctx);
+	void exitProtocolName(GramParser.ProtocolNameContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#constraint}.
+	 * Enter a parse tree produced by {@link GramParser#selector}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstraint(GramParser.ConstraintContext ctx);
+	void enterSelector(GramParser.SelectorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#constraint}.
+	 * Exit a parse tree produced by {@link GramParser#selector}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstraint(GramParser.ConstraintContext ctx);
+	void exitSelector(GramParser.SelectorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeArguments}.
+	 * Enter a parse tree produced by {@link GramParser#blockType}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeArguments(GramParser.TypeArgumentsContext ctx);
+	void enterBlockType(GramParser.BlockTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeArguments}.
+	 * Exit a parse tree produced by {@link GramParser#blockType}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeArguments(GramParser.TypeArgumentsContext ctx);
+	void exitBlockType(GramParser.BlockTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeArgumentList}.
+	 * Enter a parse tree produced by {@link GramParser#dictionaryExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeArgumentList(GramParser.TypeArgumentListContext ctx);
+	void enterDictionaryExpression(GramParser.DictionaryExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeArgumentList}.
+	 * Exit a parse tree produced by {@link GramParser#dictionaryExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeArgumentList(GramParser.TypeArgumentListContext ctx);
+	void exitDictionaryExpression(GramParser.DictionaryExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeArgument}.
+	 * Enter a parse tree produced by {@link GramParser#dictionaryPair}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeArgument(GramParser.TypeArgumentContext ctx);
+	void enterDictionaryPair(GramParser.DictionaryPairContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeArgument}.
+	 * Exit a parse tree produced by {@link GramParser#dictionaryPair}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeArgument(GramParser.TypeArgumentContext ctx);
+	void exitDictionaryPair(GramParser.DictionaryPairContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#type}.
+	 * Enter a parse tree produced by {@link GramParser#arrayExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterType(GramParser.TypeContext ctx);
+	void enterArrayExpression(GramParser.ArrayExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#type}.
+	 * Exit a parse tree produced by {@link GramParser#arrayExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitType(GramParser.TypeContext ctx);
+	void exitArrayExpression(GramParser.ArrayExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#primaryOrUnionType}.
+	 * Enter a parse tree produced by {@link GramParser#blockParameters}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrimaryOrUnionType(GramParser.PrimaryOrUnionTypeContext ctx);
+	void enterBlockParameters(GramParser.BlockParametersContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#primaryOrUnionType}.
+	 * Exit a parse tree produced by {@link GramParser#blockParameters}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrimaryOrUnionType(GramParser.PrimaryOrUnionTypeContext ctx);
+	void exitBlockParameters(GramParser.BlockParametersContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#primaryType}.
+	 * Enter a parse tree produced by {@link GramParser#typeVariableDeclaratorOrName}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrimaryType(GramParser.PrimaryTypeContext ctx);
+	void enterTypeVariableDeclaratorOrName(GramParser.TypeVariableDeclaratorOrNameContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#primaryType}.
+	 * Exit a parse tree produced by {@link GramParser#typeVariableDeclaratorOrName}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrimaryType(GramParser.PrimaryTypeContext ctx);
+	void exitTypeVariableDeclaratorOrName(GramParser.TypeVariableDeclaratorOrNameContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#parenthesizedType}.
+	 * Enter a parse tree produced by {@link GramParser#blockExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterParenthesizedType(GramParser.ParenthesizedTypeContext ctx);
+	void enterBlockExpression(GramParser.BlockExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#parenthesizedType}.
+	 * Exit a parse tree produced by {@link GramParser#blockExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitParenthesizedType(GramParser.ParenthesizedTypeContext ctx);
+	void exitBlockExpression(GramParser.BlockExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#predefinedType}.
+	 * Enter a parse tree produced by {@link GramParser#messageExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterPredefinedType(GramParser.PredefinedTypeContext ctx);
+	void enterMessageExpression(GramParser.MessageExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#predefinedType}.
+	 * Exit a parse tree produced by {@link GramParser#messageExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitPredefinedType(GramParser.PredefinedTypeContext ctx);
+	void exitMessageExpression(GramParser.MessageExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeReference}.
+	 * Enter a parse tree produced by {@link GramParser#receiver}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeReference(GramParser.TypeReferenceContext ctx);
+	void enterReceiver(GramParser.ReceiverContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeReference}.
+	 * Exit a parse tree produced by {@link GramParser#receiver}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeReference(GramParser.TypeReferenceContext ctx);
+	void exitReceiver(GramParser.ReceiverContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeName}.
+	 * Enter a parse tree produced by {@link GramParser#messageSelector}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeName(GramParser.TypeNameContext ctx);
+	void enterMessageSelector(GramParser.MessageSelectorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeName}.
+	 * Exit a parse tree produced by {@link GramParser#messageSelector}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeName(GramParser.TypeNameContext ctx);
+	void exitMessageSelector(GramParser.MessageSelectorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#objectType}.
+	 * Enter a parse tree produced by {@link GramParser#keywordArgument}.
 	 * @param ctx the parse tree
 	 */
-	void enterObjectType(GramParser.ObjectTypeContext ctx);
+	void enterKeywordArgument(GramParser.KeywordArgumentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#objectType}.
+	 * Exit a parse tree produced by {@link GramParser#keywordArgument}.
 	 * @param ctx the parse tree
 	 */
-	void exitObjectType(GramParser.ObjectTypeContext ctx);
+	void exitKeywordArgument(GramParser.KeywordArgumentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeBody}.
+	 * Enter a parse tree produced by {@link GramParser#keywordArgumentType}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeBody(GramParser.TypeBodyContext ctx);
+	void enterKeywordArgumentType(GramParser.KeywordArgumentTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeBody}.
+	 * Exit a parse tree produced by {@link GramParser#keywordArgumentType}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeBody(GramParser.TypeBodyContext ctx);
+	void exitKeywordArgumentType(GramParser.KeywordArgumentTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeMemberList}.
+	 * Enter a parse tree produced by {@link GramParser#selectorExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeMemberList(GramParser.TypeMemberListContext ctx);
+	void enterSelectorExpression(GramParser.SelectorExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeMemberList}.
+	 * Exit a parse tree produced by {@link GramParser#selectorExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeMemberList(GramParser.TypeMemberListContext ctx);
+	void exitSelectorExpression(GramParser.SelectorExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeMember}.
+	 * Enter a parse tree produced by {@link GramParser#selectorName}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeMember(GramParser.TypeMemberContext ctx);
+	void enterSelectorName(GramParser.SelectorNameContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeMember}.
+	 * Exit a parse tree produced by {@link GramParser#selectorName}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeMember(GramParser.TypeMemberContext ctx);
+	void exitSelectorName(GramParser.SelectorNameContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#functionType}.
+	 * Enter a parse tree produced by {@link GramParser#protocolExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionType(GramParser.FunctionTypeContext ctx);
+	void enterProtocolExpression(GramParser.ProtocolExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#functionType}.
+	 * Exit a parse tree produced by {@link GramParser#protocolExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionType(GramParser.FunctionTypeContext ctx);
+	void exitProtocolExpression(GramParser.ProtocolExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeQuery}.
+	 * Enter a parse tree produced by {@link GramParser#encodeExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeQuery(GramParser.TypeQueryContext ctx);
+	void enterEncodeExpression(GramParser.EncodeExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeQuery}.
+	 * Exit a parse tree produced by {@link GramParser#encodeExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeQuery(GramParser.TypeQueryContext ctx);
+	void exitEncodeExpression(GramParser.EncodeExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#typeQueryExpression}.
+	 * Enter a parse tree produced by {@link GramParser#typeVariableDeclarator}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeQueryExpression(GramParser.TypeQueryExpressionContext ctx);
+	void enterTypeVariableDeclarator(GramParser.TypeVariableDeclaratorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#typeQueryExpression}.
+	 * Exit a parse tree produced by {@link GramParser#typeVariableDeclarator}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeQueryExpression(GramParser.TypeQueryExpressionContext ctx);
+	void exitTypeVariableDeclarator(GramParser.TypeVariableDeclaratorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#propertySignature}.
+	 * Enter a parse tree produced by {@link GramParser#throwStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterPropertySignature(GramParser.PropertySignatureContext ctx);
+	void enterThrowStatement(GramParser.ThrowStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#propertySignature}.
+	 * Exit a parse tree produced by {@link GramParser#throwStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitPropertySignature(GramParser.PropertySignatureContext ctx);
+	void exitThrowStatement(GramParser.ThrowStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#propertyName}.
+	 * Enter a parse tree produced by {@link GramParser#tryBlock}.
 	 * @param ctx the parse tree
 	 */
-	void enterPropertyName(GramParser.PropertyNameContext ctx);
+	void enterTryBlock(GramParser.TryBlockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#propertyName}.
+	 * Exit a parse tree produced by {@link GramParser#tryBlock}.
 	 * @param ctx the parse tree
 	 */
-	void exitPropertyName(GramParser.PropertyNameContext ctx);
+	void exitTryBlock(GramParser.TryBlockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#identifierName}.
+	 * Enter a parse tree produced by {@link GramParser#catchStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterIdentifierName(GramParser.IdentifierNameContext ctx);
+	void enterCatchStatement(GramParser.CatchStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#identifierName}.
+	 * Exit a parse tree produced by {@link GramParser#catchStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitIdentifierName(GramParser.IdentifierNameContext ctx);
+	void exitCatchStatement(GramParser.CatchStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#callSignature}.
+	 * Enter a parse tree produced by {@link GramParser#synchronizedStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterCallSignature(GramParser.CallSignatureContext ctx);
+	void enterSynchronizedStatement(GramParser.SynchronizedStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#callSignature}.
+	 * Exit a parse tree produced by {@link GramParser#synchronizedStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitCallSignature(GramParser.CallSignatureContext ctx);
+	void exitSynchronizedStatement(GramParser.SynchronizedStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#parameterList}.
+	 * Enter a parse tree produced by {@link GramParser#autoreleaseStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterParameterList(GramParser.ParameterListContext ctx);
+	void enterAutoreleaseStatement(GramParser.AutoreleaseStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#parameterList}.
+	 * Exit a parse tree produced by {@link GramParser#autoreleaseStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitParameterList(GramParser.ParameterListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#requiredParameterList}.
-	 * @param ctx the parse tree
-	 */
-	void enterRequiredParameterList(GramParser.RequiredParameterListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#requiredParameterList}.
-	 * @param ctx the parse tree
-	 */
-	void exitRequiredParameterList(GramParser.RequiredParameterListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#requiredParameter}.
-	 * @param ctx the parse tree
-	 */
-	void enterRequiredParameter(GramParser.RequiredParameterContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#requiredParameter}.
-	 * @param ctx the parse tree
-	 */
-	void exitRequiredParameter(GramParser.RequiredParameterContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#optionalParameterList}.
-	 * @param ctx the parse tree
-	 */
-	void enterOptionalParameterList(GramParser.OptionalParameterListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#optionalParameterList}.
-	 * @param ctx the parse tree
-	 */
-	void exitOptionalParameterList(GramParser.OptionalParameterListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#optionalParameter}.
-	 * @param ctx the parse tree
-	 */
-	void enterOptionalParameter(GramParser.OptionalParameterContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#optionalParameter}.
-	 * @param ctx the parse tree
-	 */
-	void exitOptionalParameter(GramParser.OptionalParameterContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#restParameter}.
-	 * @param ctx the parse tree
-	 */
-	void enterRestParameter(GramParser.RestParameterContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#restParameter}.
-	 * @param ctx the parse tree
-	 */
-	void exitRestParameter(GramParser.RestParameterContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#constructSignature}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructSignature(GramParser.ConstructSignatureContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#constructSignature}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructSignature(GramParser.ConstructSignatureContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#indexSignature}.
-	 * @param ctx the parse tree
-	 */
-	void enterIndexSignature(GramParser.IndexSignatureContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#indexSignature}.
-	 * @param ctx the parse tree
-	 */
-	void exitIndexSignature(GramParser.IndexSignatureContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#methodSignature}.
-	 * @param ctx the parse tree
-	 */
-	void enterMethodSignature(GramParser.MethodSignatureContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#methodSignature}.
-	 * @param ctx the parse tree
-	 */
-	void exitMethodSignature(GramParser.MethodSignatureContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#typeAliasDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeAliasDeclaration(GramParser.TypeAliasDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#typeAliasDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeAliasDeclaration(GramParser.TypeAliasDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#propertyAssignment}.
-	 * @param ctx the parse tree
-	 */
-	void enterPropertyAssignment(GramParser.PropertyAssignmentContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#propertyAssignment}.
-	 * @param ctx the parse tree
-	 */
-	void exitPropertyAssignment(GramParser.PropertyAssignmentContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#getAccessor}.
-	 * @param ctx the parse tree
-	 */
-	void enterGetAccessor(GramParser.GetAccessorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#getAccessor}.
-	 * @param ctx the parse tree
-	 */
-	void exitGetAccessor(GramParser.GetAccessorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#setAccessor}.
-	 * @param ctx the parse tree
-	 */
-	void enterSetAccessor(GramParser.SetAccessorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#setAccessor}.
-	 * @param ctx the parse tree
-	 */
-	void exitSetAccessor(GramParser.SetAccessorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#elementList}.
-	 * @param ctx the parse tree
-	 */
-	void enterElementList(GramParser.ElementListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#elementList}.
-	 * @param ctx the parse tree
-	 */
-	void exitElementList(GramParser.ElementListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#elision}.
-	 * @param ctx the parse tree
-	 */
-	void enterElision(GramParser.ElisionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#elision}.
-	 * @param ctx the parse tree
-	 */
-	void exitElision(GramParser.ElisionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#spreadElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterSpreadElement(GramParser.SpreadElementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#spreadElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitSpreadElement(GramParser.SpreadElementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#callExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterCallExpression(GramParser.CallExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#callExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitCallExpression(GramParser.CallExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#functionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionExpression(GramParser.FunctionExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#functionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionExpression(GramParser.FunctionExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#arrowFunctionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterArrowFunctionExpression(GramParser.ArrowFunctionExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#arrowFunctionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitArrowFunctionExpression(GramParser.ArrowFunctionExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#block}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlock(GramParser.BlockContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#block}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlock(GramParser.BlockContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#arrowFormalParameters}.
-	 * @param ctx the parse tree
-	 */
-	void enterArrowFormalParameters(GramParser.ArrowFormalParametersContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#arrowFormalParameters}.
-	 * @param ctx the parse tree
-	 */
-	void exitArrowFormalParameters(GramParser.ArrowFormalParametersContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#arguments}.
-	 * @param ctx the parse tree
-	 */
-	void enterArguments(GramParser.ArgumentsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#arguments}.
-	 * @param ctx the parse tree
-	 */
-	void exitArguments(GramParser.ArgumentsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#unaryExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterUnaryExpression(GramParser.UnaryExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#unaryExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitUnaryExpression(GramParser.UnaryExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#variableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariableDeclaration(GramParser.VariableDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#variableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariableDeclaration(GramParser.VariableDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#simpleVariableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterSimpleVariableDeclaration(GramParser.SimpleVariableDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#simpleVariableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitSimpleVariableDeclaration(GramParser.SimpleVariableDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#typeAnnotation}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeAnnotation(GramParser.TypeAnnotationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#typeAnnotation}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeAnnotation(GramParser.TypeAnnotationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#destructuringVariableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterDestructuringVariableDeclaration(GramParser.DestructuringVariableDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#destructuringVariableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitDestructuringVariableDeclaration(GramParser.DestructuringVariableDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingPattern}.
-	 * @param ctx the parse tree
-	 */
-	void enterBindingPattern(GramParser.BindingPatternContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingPattern}.
-	 * @param ctx the parse tree
-	 */
-	void exitBindingPattern(GramParser.BindingPatternContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#objectBindingPattern}.
-	 * @param ctx the parse tree
-	 */
-	void enterObjectBindingPattern(GramParser.ObjectBindingPatternContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#objectBindingPattern}.
-	 * @param ctx the parse tree
-	 */
-	void exitObjectBindingPattern(GramParser.ObjectBindingPatternContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingPropertyList}.
-	 * @param ctx the parse tree
-	 */
-	void enterBindingPropertyList(GramParser.BindingPropertyListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingPropertyList}.
-	 * @param ctx the parse tree
-	 */
-	void exitBindingPropertyList(GramParser.BindingPropertyListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingProperty}.
-	 * @param ctx the parse tree
-	 */
-	void enterBindingProperty(GramParser.BindingPropertyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingProperty}.
-	 * @param ctx the parse tree
-	 */
-	void exitBindingProperty(GramParser.BindingPropertyContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#arrayBindingPattern}.
-	 * @param ctx the parse tree
-	 */
-	void enterArrayBindingPattern(GramParser.ArrayBindingPatternContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#arrayBindingPattern}.
-	 * @param ctx the parse tree
-	 */
-	void exitArrayBindingPattern(GramParser.ArrayBindingPatternContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingElementList}.
-	 * @param ctx the parse tree
-	 */
-	void enterBindingElementList(GramParser.BindingElementListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingElementList}.
-	 * @param ctx the parse tree
-	 */
-	void exitBindingElementList(GramParser.BindingElementListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterBindingElement(GramParser.BindingElementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitBindingElement(GramParser.BindingElementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingRestElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterBindingRestElement(GramParser.BindingRestElementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingRestElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitBindingRestElement(GramParser.BindingRestElementContext ctx);
+	void exitAutoreleaseStatement(GramParser.AutoreleaseStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GramParser#functionDeclaration}.
 	 * @param ctx the parse tree
@@ -627,355 +288,85 @@ public interface GramListener extends ParseTreeListener {
 	 */
 	void exitFunctionDeclaration(GramParser.FunctionDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#functionOverloads}.
+	 * Enter a parse tree produced by {@link GramParser#functionDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionOverloads(GramParser.FunctionOverloadsContext ctx);
+	void enterFunctionDefinition(GramParser.FunctionDefinitionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#functionOverloads}.
+	 * Exit a parse tree produced by {@link GramParser#functionDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionOverloads(GramParser.FunctionOverloadsContext ctx);
+	void exitFunctionDefinition(GramParser.FunctionDefinitionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#functionOverload}.
+	 * Enter a parse tree produced by {@link GramParser#functionSignature}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionOverload(GramParser.FunctionOverloadContext ctx);
+	void enterFunctionSignature(GramParser.FunctionSignatureContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#functionOverload}.
+	 * Exit a parse tree produced by {@link GramParser#functionSignature}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionOverload(GramParser.FunctionOverloadContext ctx);
+	void exitFunctionSignature(GramParser.FunctionSignatureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#functionImplementation}.
+	 * Enter a parse tree produced by {@link GramParser#attribute}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionImplementation(GramParser.FunctionImplementationContext ctx);
+	void enterAttribute(GramParser.AttributeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#functionImplementation}.
+	 * Exit a parse tree produced by {@link GramParser#attribute}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionImplementation(GramParser.FunctionImplementationContext ctx);
+	void exitAttribute(GramParser.AttributeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#interfaceDeclaration}.
+	 * Enter a parse tree produced by {@link GramParser#attributeName}.
 	 * @param ctx the parse tree
 	 */
-	void enterInterfaceDeclaration(GramParser.InterfaceDeclarationContext ctx);
+	void enterAttributeName(GramParser.AttributeNameContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#interfaceDeclaration}.
+	 * Exit a parse tree produced by {@link GramParser#attributeName}.
 	 * @param ctx the parse tree
 	 */
-	void exitInterfaceDeclaration(GramParser.InterfaceDeclarationContext ctx);
+	void exitAttributeName(GramParser.AttributeNameContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#interfaceExtendsClause}.
+	 * Enter a parse tree produced by {@link GramParser#attributeParameters}.
 	 * @param ctx the parse tree
 	 */
-	void enterInterfaceExtendsClause(GramParser.InterfaceExtendsClauseContext ctx);
+	void enterAttributeParameters(GramParser.AttributeParametersContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#interfaceExtendsClause}.
+	 * Exit a parse tree produced by {@link GramParser#attributeParameters}.
 	 * @param ctx the parse tree
 	 */
-	void exitInterfaceExtendsClause(GramParser.InterfaceExtendsClauseContext ctx);
+	void exitAttributeParameters(GramParser.AttributeParametersContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#classOrInterfaceTypeList}.
+	 * Enter a parse tree produced by {@link GramParser#attributeParameterList}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassOrInterfaceTypeList(GramParser.ClassOrInterfaceTypeListContext ctx);
+	void enterAttributeParameterList(GramParser.AttributeParameterListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#classOrInterfaceTypeList}.
+	 * Exit a parse tree produced by {@link GramParser#attributeParameterList}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassOrInterfaceTypeList(GramParser.ClassOrInterfaceTypeListContext ctx);
+	void exitAttributeParameterList(GramParser.AttributeParameterListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#classOrInterfaceType}.
+	 * Enter a parse tree produced by {@link GramParser#attributeParameter}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassOrInterfaceType(GramParser.ClassOrInterfaceTypeContext ctx);
+	void enterAttributeParameter(GramParser.AttributeParameterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#classOrInterfaceType}.
+	 * Exit a parse tree produced by {@link GramParser#attributeParameter}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassOrInterfaceType(GramParser.ClassOrInterfaceTypeContext ctx);
+	void exitAttributeParameter(GramParser.AttributeParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#classDeclaration}.
+	 * Enter a parse tree produced by {@link GramParser#attributeParameterAssignment}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassDeclaration(GramParser.ClassDeclarationContext ctx);
+	void enterAttributeParameterAssignment(GramParser.AttributeParameterAssignmentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#classDeclaration}.
+	 * Exit a parse tree produced by {@link GramParser#attributeParameterAssignment}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassDeclaration(GramParser.ClassDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#classHeritage}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassHeritage(GramParser.ClassHeritageContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#classHeritage}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassHeritage(GramParser.ClassHeritageContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#classExtendsClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassExtendsClause(GramParser.ClassExtendsClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#classExtendsClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassExtendsClause(GramParser.ClassExtendsClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#classType}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassType(GramParser.ClassTypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#classType}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassType(GramParser.ClassTypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#implementsClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterImplementsClause(GramParser.ImplementsClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#implementsClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitImplementsClause(GramParser.ImplementsClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassBody(GramParser.ClassBodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassBody(GramParser.ClassBodyContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#classElements}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassElements(GramParser.ClassElementsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#classElements}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassElements(GramParser.ClassElementsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#classElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassElement(GramParser.ClassElementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#classElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassElement(GramParser.ClassElementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#constructorDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructorDeclaration(GramParser.ConstructorDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#constructorDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructorDeclaration(GramParser.ConstructorDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#constructorOverloads}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructorOverloads(GramParser.ConstructorOverloadsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#constructorOverloads}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructorOverloads(GramParser.ConstructorOverloadsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#constructorOverload}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructorOverload(GramParser.ConstructorOverloadContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#constructorOverload}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructorOverload(GramParser.ConstructorOverloadContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#constructorImplementation}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructorImplementation(GramParser.ConstructorImplementationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#constructorImplementation}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructorImplementation(GramParser.ConstructorImplementationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#propertyMemberDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterPropertyMemberDeclaration(GramParser.PropertyMemberDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#propertyMemberDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitPropertyMemberDeclaration(GramParser.PropertyMemberDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#memberVariableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterMemberVariableDeclaration(GramParser.MemberVariableDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#memberVariableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitMemberVariableDeclaration(GramParser.MemberVariableDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#memberFunctionDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterMemberFunctionDeclaration(GramParser.MemberFunctionDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#memberFunctionDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitMemberFunctionDeclaration(GramParser.MemberFunctionDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#memberFunctionOverloads}.
-	 * @param ctx the parse tree
-	 */
-	void enterMemberFunctionOverloads(GramParser.MemberFunctionOverloadsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#memberFunctionOverloads}.
-	 * @param ctx the parse tree
-	 */
-	void exitMemberFunctionOverloads(GramParser.MemberFunctionOverloadsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#memberFunctionOverload}.
-	 * @param ctx the parse tree
-	 */
-	void enterMemberFunctionOverload(GramParser.MemberFunctionOverloadContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#memberFunctionOverload}.
-	 * @param ctx the parse tree
-	 */
-	void exitMemberFunctionOverload(GramParser.MemberFunctionOverloadContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#memberFunctionImplementation}.
-	 * @param ctx the parse tree
-	 */
-	void enterMemberFunctionImplementation(GramParser.MemberFunctionImplementationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#memberFunctionImplementation}.
-	 * @param ctx the parse tree
-	 */
-	void exitMemberFunctionImplementation(GramParser.MemberFunctionImplementationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#memberAccessorDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterMemberAccessorDeclaration(GramParser.MemberAccessorDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#memberAccessorDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitMemberAccessorDeclaration(GramParser.MemberAccessorDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#indexMemberDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterIndexMemberDeclaration(GramParser.IndexMemberDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#indexMemberDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitIndexMemberDeclaration(GramParser.IndexMemberDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#functionBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionBody(GramParser.FunctionBodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#functionBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionBody(GramParser.FunctionBodyContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#functionStatementList}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionStatementList(GramParser.FunctionStatementListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#functionStatementList}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionStatementList(GramParser.FunctionStatementListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#statementList}.
-	 * @param ctx the parse tree
-	 */
-	void enterStatementList(GramParser.StatementListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#statementList}.
-	 * @param ctx the parse tree
-	 */
-	void exitStatementList(GramParser.StatementListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#statementListItem}.
-	 * @param ctx the parse tree
-	 */
-	void enterStatementListItem(GramParser.StatementListItemContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#statementListItem}.
-	 * @param ctx the parse tree
-	 */
-	void exitStatementListItem(GramParser.StatementListItemContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterStatement(GramParser.StatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitStatement(GramParser.StatementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#blockStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlockStatement(GramParser.BlockStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#blockStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlockStatement(GramParser.BlockStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#expressionStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpressionStatement(GramParser.ExpressionStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#expressionStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpressionStatement(GramParser.ExpressionStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpression(GramParser.ExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpression(GramParser.ExpressionContext ctx);
+	void exitAttributeParameterAssignment(GramParser.AttributeParameterAssignmentContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GramParser#declaration}.
 	 * @param ctx the parse tree
@@ -987,55 +378,575 @@ public interface GramListener extends ParseTreeListener {
 	 */
 	void exitDeclaration(GramParser.DeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#hoistableDeclaration}.
+	 * Enter a parse tree produced by {@link GramParser#functionCallExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterHoistableDeclaration(GramParser.HoistableDeclarationContext ctx);
+	void enterFunctionCallExpression(GramParser.FunctionCallExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#hoistableDeclaration}.
+	 * Exit a parse tree produced by {@link GramParser#functionCallExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitHoistableDeclaration(GramParser.HoistableDeclarationContext ctx);
+	void exitFunctionCallExpression(GramParser.FunctionCallExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#lexicalDeclaration}.
+	 * Enter a parse tree produced by {@link GramParser#enumDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterLexicalDeclaration(GramParser.LexicalDeclarationContext ctx);
+	void enterEnumDeclaration(GramParser.EnumDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#lexicalDeclaration}.
+	 * Exit a parse tree produced by {@link GramParser#enumDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitLexicalDeclaration(GramParser.LexicalDeclarationContext ctx);
+	void exitEnumDeclaration(GramParser.EnumDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#letOrConst}.
+	 * Enter a parse tree produced by {@link GramParser#varDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterLetOrConst(GramParser.LetOrConstContext ctx);
+	void enterVarDeclaration(GramParser.VarDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#letOrConst}.
+	 * Exit a parse tree produced by {@link GramParser#varDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitLetOrConst(GramParser.LetOrConstContext ctx);
+	void exitVarDeclaration(GramParser.VarDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingList}.
+	 * Enter a parse tree produced by {@link GramParser#typedefDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterBindingList(GramParser.BindingListContext ctx);
+	void enterTypedefDeclaration(GramParser.TypedefDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingList}.
+	 * Exit a parse tree produced by {@link GramParser#typedefDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitBindingList(GramParser.BindingListContext ctx);
+	void exitTypedefDeclaration(GramParser.TypedefDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#lexicalBinding}.
+	 * Enter a parse tree produced by {@link GramParser#typeDeclaratorList}.
 	 * @param ctx the parse tree
 	 */
-	void enterLexicalBinding(GramParser.LexicalBindingContext ctx);
+	void enterTypeDeclaratorList(GramParser.TypeDeclaratorListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#lexicalBinding}.
+	 * Exit a parse tree produced by {@link GramParser#typeDeclaratorList}.
 	 * @param ctx the parse tree
 	 */
-	void exitLexicalBinding(GramParser.LexicalBindingContext ctx);
+	void exitTypeDeclaratorList(GramParser.TypeDeclaratorListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#typeDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypeDeclarator(GramParser.TypeDeclaratorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#typeDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypeDeclarator(GramParser.TypeDeclaratorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#declarationSpecifiers}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclarationSpecifiers(GramParser.DeclarationSpecifiersContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#declarationSpecifiers}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclarationSpecifiers(GramParser.DeclarationSpecifiersContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#attributeSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterAttributeSpecifier(GramParser.AttributeSpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#attributeSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitAttributeSpecifier(GramParser.AttributeSpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#initDeclaratorList}.
+	 * @param ctx the parse tree
+	 */
+	void enterInitDeclaratorList(GramParser.InitDeclaratorListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#initDeclaratorList}.
+	 * @param ctx the parse tree
+	 */
+	void exitInitDeclaratorList(GramParser.InitDeclaratorListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#initDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void enterInitDeclarator(GramParser.InitDeclaratorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#initDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void exitInitDeclarator(GramParser.InitDeclaratorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#specifierQualifierList}.
+	 * @param ctx the parse tree
+	 */
+	void enterSpecifierQualifierList(GramParser.SpecifierQualifierListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#specifierQualifierList}.
+	 * @param ctx the parse tree
+	 */
+	void exitSpecifierQualifierList(GramParser.SpecifierQualifierListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#ibOutletQualifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterIbOutletQualifier(GramParser.IbOutletQualifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#ibOutletQualifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitIbOutletQualifier(GramParser.IbOutletQualifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#arcBehaviourSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterArcBehaviourSpecifier(GramParser.ArcBehaviourSpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#arcBehaviourSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitArcBehaviourSpecifier(GramParser.ArcBehaviourSpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#nullabilitySpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterNullabilitySpecifier(GramParser.NullabilitySpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#nullabilitySpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitNullabilitySpecifier(GramParser.NullabilitySpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#storageClassSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterStorageClassSpecifier(GramParser.StorageClassSpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#storageClassSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitStorageClassSpecifier(GramParser.StorageClassSpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#typePrefix}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypePrefix(GramParser.TypePrefixContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#typePrefix}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypePrefix(GramParser.TypePrefixContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#typeQualifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypeQualifier(GramParser.TypeQualifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#typeQualifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypeQualifier(GramParser.TypeQualifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#protocolQualifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterProtocolQualifier(GramParser.ProtocolQualifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#protocolQualifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitProtocolQualifier(GramParser.ProtocolQualifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#typeSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypeSpecifier(GramParser.TypeSpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#typeSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypeSpecifier(GramParser.TypeSpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#typeofExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypeofExpression(GramParser.TypeofExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#typeofExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypeofExpression(GramParser.TypeofExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#enumSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnumSpecifier(GramParser.EnumSpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#enumSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnumSpecifier(GramParser.EnumSpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#enumeratorList}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnumeratorList(GramParser.EnumeratorListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#enumeratorList}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnumeratorList(GramParser.EnumeratorListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#enumerator}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnumerator(GramParser.EnumeratorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#enumerator}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnumerator(GramParser.EnumeratorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#enumeratorIdentifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnumeratorIdentifier(GramParser.EnumeratorIdentifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#enumeratorIdentifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnumeratorIdentifier(GramParser.EnumeratorIdentifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#directDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void enterDirectDeclarator(GramParser.DirectDeclaratorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#directDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void exitDirectDeclarator(GramParser.DirectDeclaratorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#declaratorSuffix}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclaratorSuffix(GramParser.DeclaratorSuffixContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#declaratorSuffix}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclaratorSuffix(GramParser.DeclaratorSuffixContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#parameterList}.
+	 * @param ctx the parse tree
+	 */
+	void enterParameterList(GramParser.ParameterListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#parameterList}.
+	 * @param ctx the parse tree
+	 */
+	void exitParameterList(GramParser.ParameterListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#pointer}.
+	 * @param ctx the parse tree
+	 */
+	void enterPointer(GramParser.PointerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#pointer}.
+	 * @param ctx the parse tree
+	 */
+	void exitPointer(GramParser.PointerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#arrayInitializer}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayInitializer(GramParser.ArrayInitializerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#arrayInitializer}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayInitializer(GramParser.ArrayInitializerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#structInitializer}.
+	 * @param ctx the parse tree
+	 */
+	void enterStructInitializer(GramParser.StructInitializerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#structInitializer}.
+	 * @param ctx the parse tree
+	 */
+	void exitStructInitializer(GramParser.StructInitializerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#initializerList}.
+	 * @param ctx the parse tree
+	 */
+	void enterInitializerList(GramParser.InitializerListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#initializerList}.
+	 * @param ctx the parse tree
+	 */
+	void exitInitializerList(GramParser.InitializerListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#typeName}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypeName(GramParser.TypeNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#typeName}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypeName(GramParser.TypeNameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#abstractDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void enterAbstractDeclarator(GramParser.AbstractDeclaratorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#abstractDeclarator}.
+	 * @param ctx the parse tree
+	 */
+	void exitAbstractDeclarator(GramParser.AbstractDeclaratorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#abstractDeclaratorSuffix}.
+	 * @param ctx the parse tree
+	 */
+	void enterAbstractDeclaratorSuffix(GramParser.AbstractDeclaratorSuffixContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#abstractDeclaratorSuffix}.
+	 * @param ctx the parse tree
+	 */
+	void exitAbstractDeclaratorSuffix(GramParser.AbstractDeclaratorSuffixContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#parameterDeclarationList}.
+	 * @param ctx the parse tree
+	 */
+	void enterParameterDeclarationList(GramParser.ParameterDeclarationListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#parameterDeclarationList}.
+	 * @param ctx the parse tree
+	 */
+	void exitParameterDeclarationList(GramParser.ParameterDeclarationListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#parameterDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterParameterDeclaration(GramParser.ParameterDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#parameterDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitParameterDeclaration(GramParser.ParameterDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#declarator}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclarator(GramParser.DeclaratorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#declarator}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclarator(GramParser.DeclaratorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterStatement(GramParser.StatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitStatement(GramParser.StatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#labeledStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterLabeledStatement(GramParser.LabeledStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#labeledStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitLabeledStatement(GramParser.LabeledStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#rangeExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterRangeExpression(GramParser.RangeExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#rangeExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitRangeExpression(GramParser.RangeExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#compoundStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterCompoundStatement(GramParser.CompoundStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#compoundStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitCompoundStatement(GramParser.CompoundStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#selectionStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterSelectionStatement(GramParser.SelectionStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#selectionStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitSelectionStatement(GramParser.SelectionStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#switchStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterSwitchStatement(GramParser.SwitchStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#switchStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitSwitchStatement(GramParser.SwitchStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#switchBlock}.
+	 * @param ctx the parse tree
+	 */
+	void enterSwitchBlock(GramParser.SwitchBlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#switchBlock}.
+	 * @param ctx the parse tree
+	 */
+	void exitSwitchBlock(GramParser.SwitchBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#switchSection}.
+	 * @param ctx the parse tree
+	 */
+	void enterSwitchSection(GramParser.SwitchSectionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#switchSection}.
+	 * @param ctx the parse tree
+	 */
+	void exitSwitchSection(GramParser.SwitchSectionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#switchLabel}.
+	 * @param ctx the parse tree
+	 */
+	void enterSwitchLabel(GramParser.SwitchLabelContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#switchLabel}.
+	 * @param ctx the parse tree
+	 */
+	void exitSwitchLabel(GramParser.SwitchLabelContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterIterationStatement(GramParser.IterationStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitIterationStatement(GramParser.IterationStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#whileStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhileStatement(GramParser.WhileStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#whileStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhileStatement(GramParser.WhileStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#doStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterDoStatement(GramParser.DoStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#doStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitDoStatement(GramParser.DoStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#forStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterForStatement(GramParser.ForStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#forStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitForStatement(GramParser.ForStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#forLoopInitializer}.
+	 * @param ctx the parse tree
+	 */
+	void enterForLoopInitializer(GramParser.ForLoopInitializerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#forLoopInitializer}.
+	 * @param ctx the parse tree
+	 */
+	void exitForLoopInitializer(GramParser.ForLoopInitializerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#forInStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterForInStatement(GramParser.ForInStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#forInStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitForInStatement(GramParser.ForInStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#jumpStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterJumpStatement(GramParser.JumpStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#jumpStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitJumpStatement(GramParser.JumpStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#expressions}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressions(GramParser.ExpressionsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#expressions}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressions(GramParser.ExpressionsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpression(GramParser.ExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpression(GramParser.ExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#assignmentOperator}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignmentOperator(GramParser.AssignmentOperatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#assignmentOperator}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignmentOperator(GramParser.AssignmentOperatorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#castExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterCastExpression(GramParser.CastExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#castExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitCastExpression(GramParser.CastExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GramParser#initializer}.
 	 * @param ctx the parse tree
@@ -1047,43 +958,113 @@ public interface GramListener extends ParseTreeListener {
 	 */
 	void exitInitializer(GramParser.InitializerContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#assignmentExpression}.
+	 * Enter a parse tree produced by {@link GramParser#constantExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignmentExpression(GramParser.AssignmentExpressionContext ctx);
+	void enterConstantExpression(GramParser.ConstantExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#assignmentExpression}.
+	 * Exit a parse tree produced by {@link GramParser#constantExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignmentExpression(GramParser.AssignmentExpressionContext ctx);
+	void exitConstantExpression(GramParser.ConstantExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#leftHandSideExpression}.
+	 * Enter a parse tree produced by {@link GramParser#unaryExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterLeftHandSideExpression(GramParser.LeftHandSideExpressionContext ctx);
+	void enterUnaryExpression(GramParser.UnaryExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#leftHandSideExpression}.
+	 * Exit a parse tree produced by {@link GramParser#unaryExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitLeftHandSideExpression(GramParser.LeftHandSideExpressionContext ctx);
+	void exitUnaryExpression(GramParser.UnaryExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#bindingIdentifier}.
+	 * Enter a parse tree produced by {@link GramParser#unaryOperator}.
 	 * @param ctx the parse tree
 	 */
-	void enterBindingIdentifier(GramParser.BindingIdentifierContext ctx);
+	void enterUnaryOperator(GramParser.UnaryOperatorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#bindingIdentifier}.
+	 * Exit a parse tree produced by {@link GramParser#unaryOperator}.
 	 * @param ctx the parse tree
 	 */
-	void exitBindingIdentifier(GramParser.BindingIdentifierContext ctx);
+	void exitUnaryOperator(GramParser.UnaryOperatorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GramParser#arrowFunction}.
+	 * Enter a parse tree produced by {@link GramParser#postfixExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrowFunction(GramParser.ArrowFunctionContext ctx);
+	void enterPostfixExpression(GramParser.PostfixExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GramParser#arrowFunction}.
+	 * Exit a parse tree produced by {@link GramParser#postfixExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrowFunction(GramParser.ArrowFunctionContext ctx);
+	void exitPostfixExpression(GramParser.PostfixExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#postfix}.
+	 * @param ctx the parse tree
+	 */
+	void enterPostfix(GramParser.PostfixContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#postfix}.
+	 * @param ctx the parse tree
+	 */
+	void exitPostfix(GramParser.PostfixContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#argumentExpressionList}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgumentExpressionList(GramParser.ArgumentExpressionListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#argumentExpressionList}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgumentExpressionList(GramParser.ArgumentExpressionListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#argumentExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgumentExpression(GramParser.ArgumentExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#argumentExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgumentExpression(GramParser.ArgumentExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#primaryExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrimaryExpression(GramParser.PrimaryExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#primaryExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrimaryExpression(GramParser.PrimaryExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#constant}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstant(GramParser.ConstantContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#constant}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstant(GramParser.ConstantContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#stringLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void enterStringLiteral(GramParser.StringLiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#stringLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void exitStringLiteral(GramParser.StringLiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramParser#identifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdentifier(GramParser.IdentifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramParser#identifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdentifier(GramParser.IdentifierContext ctx);
 }
