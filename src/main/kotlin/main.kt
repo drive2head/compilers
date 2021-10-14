@@ -109,11 +109,11 @@ fun main(args: Array<String>) {
     val lexer = GramLexer(CharStreams.fromString(str))
     val tokens = CommonTokenStream(lexer)
     val parser = GramParser(tokens)
-    val tree: ParseTree = parser.translationUnit()
+    val tree: ParseTree = parser.r()
     println("tree: ${tree.toStringTree(parser)}")
-    println("tree: ${tree.getChild(0).toStringTree(parser)}")
-//    val walker = ParseTreeWalker()
-//    walker.walk(GramWalker(), tree)
+
+    val walker = ParseTreeWalker()
+    walker.walk(GramWalker(), tree)
 //    println("tree: ${tree}")
 //    println("tree: ${tree.}")
 
