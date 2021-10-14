@@ -8,7 +8,7 @@ plugins {
 group = "me.garanya"
 version = "1.0-SNAPSHOT"
 
-sourceSets["main"].java.srcDirs("src/main/kotlin/mypackage")
+sourceSets["main"].java.srcDirs("src/main/kotlin")
 
 repositories {
     mavenCentral()
@@ -26,6 +26,6 @@ dependencies {
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
 }
-application {
-    mainClassName = "MainKt"
-}
+//application {
+//    mainClassName = "MainKt"
+//}
