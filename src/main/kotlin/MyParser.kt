@@ -1,4 +1,4 @@
-class Parser {
+class MyParser {
     private var tokens = ""
     private var pos = 0
     private lateinit var grammar: Grammar
