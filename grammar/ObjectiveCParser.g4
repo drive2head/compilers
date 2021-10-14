@@ -396,7 +396,7 @@ declarator
 statement
     : labeledStatement ';'?
     | compoundStatement ';'?
-    | selectionStatement ';'?
+    | conditionStatement ';'?
     | iterationStatement ';'?
     | jumpStatement ';'?
     | synchronizedStatement ';'?
@@ -419,7 +419,7 @@ compoundStatement
     : '{' (declaration | statement)* '}'
     ;
 
-selectionStatement
+conditionStatement
     : IF LP expression RP ifBody=statement (ELSE elseBody=statement)?
     | switchStatement
     ;
@@ -522,7 +522,6 @@ constantExpression
 
 unaryExpression
     : postfixExpression
-    | SIZEOF (unaryExpression | LP typeSpecifier RP)
     | op=(INC | DEC) unaryExpression
     | unaryOperator castExpression
     ;
@@ -536,8 +535,12 @@ unaryOperator
     | BANG
     ;
 
+functionCall: primaryExpression LP argumentExpressionList? RP; // added manually
+
 postfixExpression
-    : primaryExpression postfix*
+    :
+    functionCall
+    | primaryExpression postfix*
     | postfixExpression (DOT | STRUCTACCESS) identifier postfix*  // TODO: get rid of property and postfix expression.
     ;
 

@@ -8,23 +8,41 @@ import org.antlr.v4.runtime.CommonTokenStream
 import org.antlr.v4.runtime.tree.ParseTreeWalker
 
 fun main() {
-    val example = """
-        - (int) max:(int) num1 secondNumber:(int) num2 {
+    val example_scopes = """
+        int main() {
+            void bar() {
+                int b = 2;
+            }
 
-            /* local variable declaration */
             int result;
             
             if (num1 > num2) {
                 result = num1;
             } else {
-                result = num2;
+                int b = 4;
             }
-            
-            return result;
         }
     """
 
-    val input = example
+    val example_calls = """
+        void foo() {
+            int a = 1;
+            bar()
+            
+            int a = 1 + 2;
+        }
+        
+        void bar() {
+            int b = 2;
+        }
+        
+        int main() {
+            foo()
+            bar()
+        }
+    """
+
+    val input = example_calls
 
     /////////////////////
     // ДЕРЕВО ВЫЗОВОВ  //
