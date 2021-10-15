@@ -2,7 +2,6 @@ import generated.ObjectiveCLexer
 import generated.ObjectiveCParser
 import implemented.CallGraphListener
 import implemented.ScopeListener
-import implemented.TreeTransformer
 import org.antlr.v4.runtime.ANTLRInputStream
 import org.antlr.v4.runtime.CommonTokenStream
 import org.antlr.v4.runtime.tree.ParseTreeWalker
@@ -45,8 +44,8 @@ fun main() {
     """
 
 
-//    val input = example_calls
-    val input = example_scopes
+    val input = example_calls
+//    val input = example_scopes
 
     /////////////////////
     // ДЕРЕВО ВЫЗОВОВ  //
@@ -81,18 +80,6 @@ fun main() {
     val scopeListener = ScopeListener()
     parseTreeWalker.walk(scopeListener, parser.translationUnit())
     scopeListener.globalScope.toDot()
-
-    /////////////////////////////////
-    //  Дерево, кот. выдал парсер  //
-    /////////////////////////////////
-
-//    inputStream = ANTLRInputStream(input)
-//    lexer = ObjectiveCLexer(inputStream)
-//    tokenStream = CommonTokenStream(lexer)
-//    parser = ObjectiveCParser(tokenStream)
-//    val treeConverter = TreeTransformer()
-//    val root = treeConverter.convert(parser.translationUnit())
-//    root.toDot()
 
     println("Finished!")
 }
