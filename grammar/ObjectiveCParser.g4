@@ -77,7 +77,7 @@ typeVariableDeclaratorOrName
     ;
 
 blockExpression
-    : '^' typeSpecifier? nullabilitySpecifier? blockParameters? compoundStatement
+    : '^' typeSpecifier? nullabilitySpecifier? blockParameters? block
     ;
 
 messageExpression
@@ -129,19 +129,19 @@ throwStatement
     ;
 
 tryBlock
-    : '@try' tryStatement=compoundStatement catchStatement* ('@finally' finallyStatement=compoundStatement)?
+    : '@try' tryStatement=block catchStatement* ('@finally' finallyStatement=block)?
     ;
 
 catchStatement
-    : '@catch' LP typeVariableDeclarator RP compoundStatement
+    : '@catch' LP typeVariableDeclarator RP block
     ;
 
 synchronizedStatement
-    : '@synchronized' LP expression RP compoundStatement
+    : '@synchronized' LP expression RP block
     ;
 
 autoreleaseStatement
-    : '@autoreleasepool' compoundStatement
+    : '@autoreleasepool' block
     ;
 
 functionDeclaration
@@ -149,7 +149,7 @@ functionDeclaration
     ;
 
 functionDefinition
-    : functionSignature compoundStatement
+    : functionSignature block
     ;
 
 functionSignature
@@ -395,7 +395,7 @@ declarator
 
 statement
     : labeledStatement ';'?
-    | compoundStatement ';'?
+    | block ';'?
     | conditionStatement ';'?
     | iterationStatement ';'?
     | jumpStatement ';'?
@@ -415,7 +415,7 @@ rangeExpression
     :  constantExpression ('...' constantExpression)?
     ;
 
-compoundStatement
+block
     : '{' (declaration | statement)* '}'
     ;
 
@@ -495,7 +495,7 @@ expression
     | expression op=OR expression
 
     | expression QUESTION trueExpression=expression? COLON falseExpression=expression
-    | LP compoundStatement RP
+    | LP block RP
 
     | unaryExpression assignmentOperator assignmentExpression=expression
     ;

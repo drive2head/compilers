@@ -4,6 +4,7 @@ import java.io.File
 import java.lang.StringBuilder
 
 class Scope(val id: Int) {
+    var name: String? = null
     var parentScope: Scope? = null
     var childScopes: MutableList<Scope> = mutableListOf()
     var variables: MutableMap<String, String> = mutableMapOf() // имя переменной, тип переменной

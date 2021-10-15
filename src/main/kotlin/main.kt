@@ -25,20 +25,19 @@ fun main() {
     """
 
     val example_calls = """
-        void foo() {
-            int a = 1;
-            bar()
-            
-            int a = 1 + 2;
-        }
-        
-        void bar() {
-            int b = 2;
-        }
-        
         int main() {
-            foo()
-            bar()
+            if (true) {
+                a = 1;
+            } else {
+                b = 1;
+            }
+        
+            {
+                c = 3;
+                {
+                    d = 4;
+                }
+            }
         }
     """
 
