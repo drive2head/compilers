@@ -27,7 +27,7 @@ fun main() {
     val example_calls = """
         int main() {
             if (true) {
-                a = 1;
+                int a = 1;
             } else {
                 b = 1;
             }
