@@ -3,19 +3,45 @@ package implemented
 import java.io.File
 import java.lang.StringBuilder
 
-class CallGraph(private val map: Map<String, List<String>>) {
+class CallGraph(val name: String) {
+    var parent: CallGraph? = null
+    var childCalls: MutableList<CallGraph> = mutableListOf()
+
+    var map: MutableMap<String, MutableList<String>> = mutableMapOf()
+
     fun toDot() {
         val builder = StringBuilder()
         builder.append("digraph CallGraph {\n")
-        for ((k, v) in map) {
-            builder.append("$k;\n")
-        }
 
-        for ((k, list) in map) {
-            for (f in list) {
-                builder.append("$k -> $f;\n")
+        fun toDotChild(callGraph: CallGraph) {
+            callGraph.childCalls.forEach { call ->
+                toDotChild(call)
+                if (map[callGraph.name] == null) {
+                    map[callGraph.name] = mutableListOf()
+                }
+                val childCalls = map[callGraph.name]!!
+                childCalls.add(call.name)
             }
         }
+
+        childCalls.forEach { call ->
+            toDotChild(call)
+            if (map[name] == null) {
+                map[name] = mutableListOf()
+            }
+            val childCalls = map[name]!!
+            childCalls.add(call.name)
+        }
+
+        map.forEach { (parentCall, _) ->
+            builder.append("\t${parentCall};\n")
+        }
+        map.forEach { (parentCall, childCalls) ->
+            childCalls.forEach { childCall ->
+                builder.append("\t${parentCall} -> ${childCall};\n")
+            }
+        }
+
         builder.append("}")
         val dot = builder.toString()
         File("callGraph.dot").writeText(dot)

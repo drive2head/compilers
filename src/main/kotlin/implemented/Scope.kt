@@ -20,14 +20,14 @@ class Scope(val id: Int) {
     }
 
     private fun toDotFile(scope: Scope, builder: StringBuilder) {
-        builder.append("${scope.id} [label=\"")
+        builder.append("\t${scope.id} [label=\"${scope.name ?: "Outer Scope"}\n")
         for ((k, v) in scope.variables) {
             builder.append("$k: $v, ")
         }
         builder.append("\"];\n")
 
         for (childScope in scope.childScopes) {
-            builder.append("${scope.id} -> ${childScope.id};\n")
+            builder.append("\t${scope.id} -> ${childScope.id};\n")
         }
 
         for (childScope in scope.childScopes) {

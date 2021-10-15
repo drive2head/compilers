@@ -12,20 +12,10 @@ class ScopeListener : ObjectiveCParserBaseListener() {
 
     var isFunctionBlock = false
     var functionName: String? = ""
-    var needHandleFuncParameters = false
-
-    /** Var объявление переменных */
-    var enterVarSpecFlag = false
-    var varTypeForVarSpec = ""
-    var variableNames: MutableList<String>? = null
-    var varTypes: MutableList<String>? = null
-
-    var enterShortVarDecl = false
 
     override fun enterFunctionDefinition(ctx: ObjectiveCParser.FunctionDefinitionContext?) {
         functionName = ctx?.functionSignature()?.identifier()?.IDENTIFIER()?.text
         isFunctionBlock = true
-        needHandleFuncParameters = true
 
         val currScope = Scope(scopeId++)
         currScope.parentScope = globalScope
@@ -45,8 +35,6 @@ class ScopeListener : ObjectiveCParserBaseListener() {
         }
 
         val tmpScope = Scope(scopeId++)
-        println(scopeId)
-
         var parent = ctx?.parent?.parent ?: throw Error("Fix me")
         var scopeName = "-"
         if (parent is ObjectiveCParser.BlockContext) {
@@ -66,6 +54,7 @@ class ScopeListener : ObjectiveCParserBaseListener() {
 
     override fun exitBlock(ctx: ObjectiveCParser.BlockContext?) {
         currentScope = currentScope.parentScope!!
+
         super.exitBlock(ctx)
     }
 
@@ -77,33 +66,8 @@ class ScopeListener : ObjectiveCParserBaseListener() {
 
         currentScope.variables.put(varName, varType)
 
-//        if (enterVarSpecFlag || enterShortVarDecl) {
-//            for (varName in ctx.children) {
-//                if (varName.text != ",") {
-//                    variableNames!!.add(varName.text)
-//                }
-//            }
-//        }
-
         super.enterVarDeclaration(ctx)
     }
 
 
 }
-
-
-// todo опрелять тип переменной в случае короткого присваивания другой переменной: x := y (где y int)
-// todo кажется сложно, можно для данного случая решить локально, но в целом это частный случай оценки типа выражения
-// todo определять через присваивание также типы
-//    | structType
-//    | pointerType
-//    | functionType
-//    | interfaceType
-
-// shortVarDecl ":=" может быть в:
-// if
-// for
-// switch
-// type switch???
-//var needHandleFuncParameters = false // todo когда ставить в false, после обработки параметров функции?
-//needHandleFuncParameters = false // todo тут неверно мб, лучше когда заходим в блок функции текущей

@@ -10,38 +10,43 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker
 fun main() {
     val example_scopes = """
         int main() {
-            void bar() {
-                int b = 2;
-            }
-
-            int result;
-            
-            if (num1 > num2) {
-                result = num1;
-            } else {
-                int b = 4;
-            }
-        }
-    """
-
-    val example_calls = """
-        int main() {
+            int e = 5;
+        
             if (true) {
                 int a = 1;
             } else {
-                b = 1;
+                int b = 1;
+                NSArray *arr = @[ @"1", @"2", @"3" ];
             }
         
             {
-                c = 3;
+                int c = 3;
                 {
-                    d = 4;
+                    int d = 4;
                 }
             }
         }
     """
 
-    val input = example_calls
+    val example_calls = """
+        int foo() {
+            return 1;
+        }
+
+        int bar() {
+            foo();
+        }
+
+        int main() {
+            foo();
+
+            bar(foo());
+        }
+    """
+
+
+//    val input = example_calls
+    val input = example_scopes
 
     /////////////////////
     // ДЕРЕВО ВЫЗОВОВ  //
@@ -56,21 +61,14 @@ fun main() {
     // Передаем поток токенов парсеру
     var parser = ObjectiveCParser(tokenStream)
 
-    // ?
     val callGraphListener = CallGraphListener()
-    // ?
     var parseTreeWalker = ParseTreeWalker()
     // Обход дерева
-    parseTreeWalker.walk(
-        callGraphListener, // ?
-        parser.translationUnit() // дерево
-    )
-    // Строим деерво вызовов
+    parseTreeWalker.walk(callGraphListener, parser.translationUnit())
+    // Строим дерево вызовов
     val callGraph = callGraphListener.buildCallGraph()
-    if (callGraph != null) {
-        // Если дерево построилось, генерим dot файл
-        callGraph.toDot()
-    }
+    // Если дерево построилось, генерим dot файл
+    callGraph?.toDot()
 
     /////////////////////////
     //  Области видимости  //
@@ -82,20 +80,19 @@ fun main() {
     parser = ObjectiveCParser(tokenStream)
     val scopeListener = ScopeListener()
     parseTreeWalker.walk(scopeListener, parser.translationUnit())
-    // ?
     scopeListener.globalScope.toDot()
 
     /////////////////////////////////
     //  Дерево, кот. выдал парсер  //
     /////////////////////////////////
 
-    inputStream = ANTLRInputStream(input)
-    lexer = ObjectiveCLexer(inputStream)
-    tokenStream = CommonTokenStream(lexer)
-    parser = ObjectiveCParser(tokenStream)
-    val treeConverter = TreeTransformer()
-    val root = treeConverter.convert(parser.translationUnit())
-    root.toDot()
+//    inputStream = ANTLRInputStream(input)
+//    lexer = ObjectiveCLexer(inputStream)
+//    tokenStream = CommonTokenStream(lexer)
+//    parser = ObjectiveCParser(tokenStream)
+//    val treeConverter = TreeTransformer()
+//    val root = treeConverter.convert(parser.translationUnit())
+//    root.toDot()
 
-    println("hello!")
+    println("Finished!")
 }

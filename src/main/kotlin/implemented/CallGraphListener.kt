@@ -2,55 +2,76 @@ package implemented
 
 import generated.ObjectiveCParser
 import generated.ObjectiveCParserBaseListener
+import org.antlr.v4.runtime.ParserRuleContext
 
 class CallGraphListener: ObjectiveCParserBaseListener() {
-    var functionWithFunctionList = mutableMapOf<String, MutableList<String>>()
-    private var currentFunctionName = ""
-    private var calledFunctionName = ""
+    var mainCall = CallGraph("main")
+    var currentCall: CallGraph? = null
+    var functions = mutableMapOf<String, CallGraph>()
 
-    /** не менял */
+    override fun enterFunctionDefinition(ctx: ObjectiveCParser.FunctionDefinitionContext?) {
+        val callName = ctx?.functionSignature()?.identifier()?.IDENTIFIER()?.text
+            ?: throw Error("Ошибка при получении имени вызова")
+        val call = CallGraph(callName)
+        functions[callName] = call
+        currentCall = call
+
+        super.enterFunctionDefinition(ctx)
+    }
+
+    override fun exitFunctionDefinition(ctx: ObjectiveCParser.FunctionDefinitionContext?) {
+        currentCall = null
+
+        super.exitFunctionDefinition(ctx)
+    }
+
+    override fun enterFunctionCall(ctx: ObjectiveCParser.FunctionCallContext?) {
+        val callName = ctx?.primaryExpression()?.identifier()?.IDENTIFIER()?.text
+            ?: throw Error("Ошибка при получении имени вызова")
+        val call = functions[callName] ?: throw Error("Не удалось найти функцию $callName")
+        if (currentCall == null) throw Error("Для вызова функции не определена родительская функция")
+        currentCall!!.childCalls.add(call)
+        call.parent = currentCall!!
+
+        super.enterFunctionCall(ctx)
+    }
+
+    override fun enterFunctionCallWithFunctionCallsArgs(ctx: ObjectiveCParser.FunctionCallWithFunctionCallsArgsContext?) {
+        val callName = ctx?.primaryExpression()?.identifier()?.IDENTIFIER()?.text
+            ?: throw Error("Ошибка при получении имени вызова")
+        val argumentsCalls = mutableListOf<String>()
+
+        fun addFunctionCall(functionCallCtx: ParserRuleContext) {
+            if (functionCallCtx is ObjectiveCParser.FunctionCallContext) {
+                val _callName = functionCallCtx.primaryExpression().identifier().IDENTIFIER().text
+                argumentsCalls.add(_callName)
+            } else if (functionCallCtx is ObjectiveCParser.FunctionCallWithFunctionCallsArgsContext) {
+                functionCallCtx.argumentExpressionListWithFunctionCalls().argumentExpression().filter {
+                    it is ObjectiveCParser.FunctionCallContext || it is ObjectiveCParser.FunctionCallWithFunctionCallsArgsContext
+                }.forEach {
+                    addFunctionCall(it)
+                }
+            } else {
+                throw Error("В addFunctionCall передан контекст, не являющийся вызовом")
+            }
+        }
+
+        ctx.argumentExpressionListWithFunctionCalls()?.argumentExpression()?.filter {
+            it is ObjectiveCParser.FunctionCallContext || it is ObjectiveCParser.FunctionCallWithFunctionCallsArgsContext
+        }?.forEach { addFunctionCall(it) }
+
+        if (currentCall == null) throw Error("Для вызова функции не определена родительская функция")
+
+        argumentsCalls.add(callName)
+        argumentsCalls.forEach { callName ->
+            val call = functions[callName] ?: throw Error("Не удалось найти функцию $callName")
+            currentCall!!.childCalls.add(call)
+        }
+
+        super.enterFunctionCallWithFunctionCallsArgs(ctx)
+    }
+
     fun buildCallGraph(): CallGraph? {
-        val mainFunctions = functionWithFunctionList["main"] ?: return null
-
-        if (mainFunctions.isEmpty()) {
-            return CallGraph(mapOf("main" to listOf()))
-        }
-
-
-        val execFuncSet = mutableSetOf<String>().apply {
-            add("main")
-        }
-        val iterateFuncQueue = mutableListOf<String>().apply {
-            add("main")
-        }
-        while (true) {
-            val tmpFuncName = iterateFuncQueue.removeFirstOrNull()
-            if (tmpFuncName == null) {
-                break
-            }
-
-            var funcList = functionWithFunctionList[tmpFuncName]
-            if (funcList == null) {
-                continue
-            }
-
-            for (f in funcList) {
-                execFuncSet.add(f)
-                iterateFuncQueue.add(f)
-            }
-        }
-
-
-        val calledFunctions = mutableMapOf<String, MutableList<String>>()
-
-        for (f in execFuncSet) {
-            val list = functionWithFunctionList[f]
-            if (list == null) {
-                continue
-            }
-            calledFunctions.put(f, list)
-        }
-
-        return CallGraph(calledFunctions)
+        return functions["main"]
     }
 }

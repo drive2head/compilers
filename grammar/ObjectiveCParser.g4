@@ -535,11 +535,14 @@ unaryOperator
     | BANG
     ;
 
-functionCall: primaryExpression LP argumentExpressionList? RP; // added manually
+functionCall: primaryExpression LP argumentExpressionList? RP;
+
+functionCallWithFunctionCallsArgs: primaryExpression LP argumentExpressionListWithFunctionCalls RP;
 
 postfixExpression
     :
-    functionCall
+    functionCallWithFunctionCallsArgs
+    | functionCall
     | primaryExpression postfix*
     | postfixExpression (DOT | STRUCTACCESS) identifier postfix*  // TODO: get rid of property and postfix expression.
     ;
@@ -554,6 +557,10 @@ postfix
 argumentExpressionList
     : argumentExpression (',' argumentExpression)*
     ;
+
+argumentExpressionListWithFunctionCalls:
+    functionCall (',' argumentExpression)*
+    | argumentExpression (',' argumentExpression)* (',' functionCall)+ (',' argumentExpression)* ;
 
 argumentExpression
     : expression
